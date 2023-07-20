@@ -19,9 +19,9 @@
     <load src="./partials/header.html" />
     <main class="main">
       <!--section Hero-->
-      <section class="section section--hero">
+      <section class="section section--hero" style="min-height: 100vh">
         <div class="container">
-          <div class="title-wrapp">
+          <div class="title-wrapp" data-animation="fade-bottom">
             <h1 class="title title--h1">Заголовок страницы</h1>
             <p class="subtitle">Подарите своему телу полное погружение <br />в атмосферу расслабления</p>
             <button class="button" data-popup="request">записаться</button>
@@ -29,10 +29,20 @@
         </div>
       </section>
       <!--section Hero end-->
+
+      <!--section Hero-->
+      <section class="section section--hero" style="min-height: 100vh; background: #eee">
+        <div class="container">
+          <div class="title-wrapp">
+            <h1 class="title title--h1" data-animation="fade-right">Блок 2</h1>
+          </div>
+        </div>
+      </section>
+      <!--section Hero end-->
     </main>
     <load src="./partials/footer.html" />
     <load src="./partials/popup.html" />
-
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script type="module" src="./js/scripts.js"></script>
   </body>

@@ -1,4 +1,5 @@
 :root {
+  --color: #c7af81;
   --black: #2c2c2c;
   --grey: rgba(0, 0, 0, 0.6);
   --placeholder: #c4c4c4;
@@ -149,40 +150,44 @@
   visibility: visible;
   pointer-events: all;
   z-index: 9999;
-  background: #eee;
-  transition: opacity 600ms var(--cubic), visibility 600ms var(--cubic);
+  background: var(--bg);
+  transition: opacity 0ms var(--cubic), visibility 0ms var(--cubic);
 }
 .preloader.is--hidden {
+  transition: opacity 1000ms var(--cubic), visibility 1000ms var(--cubic);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.preloader__procent {
-  position: relative;
+.preloader__logo {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: auto;
-}
-.preloader__procent p {
   position: relative;
-  font-size: 58px;
-  z-index: 2;
+  width: 120px;
+  height: 120px;
 }
-.preloader__procent .preloader__svg {
+.preloader__logo svg {
   display: block;
+  max-width: 60%;
+  max-height: 60%;
+}
+.preloader__logo svg use {
+  fill: var(--black);
+}
+.preloader__logo:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-left: 1px solid var(--black);
+  border-radius: 100px;
   position: absolute;
-  z-index: 1;
-  width: 0%;
-  height: 20px;
-  border-radius: 4px;
-  left: 0;
-  bottom: 0;
-  transition: width 250ms var(--cubic) 0s;
-  background: lime;
+  left: 0px;
+  top: 0px;
+  -webkit-animation: 0.8s linear 0s infinite rotate;
+          animation: 0.8s linear 0s infinite rotate;
 }
 
 /*----------------------------------------------- HEADER*/
@@ -191,9 +196,9 @@
   left: 0px;
   top: 0px;
   background-color: rgba(0, 0, 0, 0);
-  padding: 20px 0px;
   z-index: 20;
   width: 100%;
+  transition: background-color 250ms var(--cubic), box-shadow 250ms var(--cubic);
 }
 .header.fix {
   background: var(--bg);
@@ -204,6 +209,8 @@
   justify-content: space-between;
   align-items: center;
   max-width: 1280px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 @media screen and (max-width: 767px) {
   .header .container {
@@ -215,20 +222,14 @@
     flex-wrap: nowrap;
   }
 }
-@media screen and (max-width: 767px) {
-  .header .close-area {
-    display: block;
-  }
-}
-@media screen and (min-width: 768px) {
-  .header .close-area {
-    display: none;
-  }
+.header .button {
+  order: 2;
 }
 
 .logo {
   display: inline-flex;
   align-items: center;
+  margin-right: 20px;
 }
 .logo svg {
   display: block;
@@ -249,6 +250,7 @@
     display: block;
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     background: rgba(0, 0, 0, 0.4);
     position: fixed;
     left: 0;
@@ -277,29 +279,28 @@
   flex-wrap: wrap;
   height: auto;
 }
-.menu-body .closeBtn {
-  right: 4px;
-  top: 4px;
-}
 @media screen and (max-width: 767px) {
   .menu-body {
-    flex-direction: column;
     justify-content: space-between;
-    padding: 50px 20px 20px 20px;
+    align-items: flex-start;
+    align-content: space-between;
+    padding: 60px 20px 20px 20px;
     position: absolute;
     right: 0px;
     top: 0px;
     width: 100%;
-    height: 100%;
-    min-height: 380px;
+    height: auto;
+    min-height: 100%;
     max-width: 380px;
-    overflow-x: hidden;
-    overflow-y: auto;
     z-index: 1;
     background: var(--white);
     box-shadow: 0px 0px 24px rgba(105, 105, 105, 0.5);
     transform: translate(101%, 0%);
     transition: transform 600ms var(--cubic);
+  }
+  .menu-body .button {
+    width: 100%;
+    margin-top: 40px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -309,58 +310,16 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  .menu {
-    width: 100%;
-  }
+.header__buttons {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: auto;
+  order: 1;
 }
-@media screen and (min-width: 768px) {
-  .menu {
-    margin: 0 auto;
-    padding: 0px 40px;
-    width: auto;
-  }
-  .menu ul {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-.menu .menu__item a {
-  display: block;
-  position: relative;
-  color: var(--black);
-}
-@media screen and (max-width: 767px) {
-  .menu .menu__item a {
-    font-size: 16px;
-    line-height: 1.171875;
-    background: rgba(0, 0, 0, 0);
-    transition: background 250ms var(--cubic);
-    padding: 16px;
-  }
-  .menu .menu__item a:hover, .menu .menu__item a:focus, .menu .menu__item a:active {
-    background: var(--black);
-  }
-}
-@media screen and (min-width: 768px) {
-  .menu .menu__item a {
-    font-size: 14px;
-    line-height: 1.1428;
-    border-bottom: 1px solid rgba(0, 0, 0, 0);
-    transition: color 250ms var(--cubic), border-bottom 250ms var(--cubic);
-  }
-  .menu .menu__item a:hover, .menu .menu__item a:focus, .menu .menu__item a:active {
-    color: var(--black);
-    border-bottom: 1px solid var(--black);
-  }
-}
-@media screen and (min-width: 768px) {
-  .menu .menu__item {
-    margin-right: 28px;
-  }
-  .menu .menu__item:last-child {
-    margin-right: 0px;
-  }
+.header__buttons a {
+  white-space: nowrap;
 }
 
 .burger {
@@ -415,31 +374,174 @@
   }
 }
 
-.closeBtn {
-  width: 24px;
-  height: 24px;
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 6;
-  color: var(--black);
+@media screen and (max-width: 767px) {
+  .menu {
+    width: 100%;
+  }
 }
-.closeBtn svg {
-  fill: currentColor;
+@media screen and (min-width: 768px) {
+  .menu {
+    padding: 0px 40px;
+    width: auto;
+  }
 }
 
-.close-area {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
+/*MOBIL*/
+@media screen and (max-width: 767px) {
+  .menu__list {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+  .menu__list li {
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+  }
+  .menu__list li a {
+    display: block;
+    position: relative;
+    color: inherit;
+    width: 100%;
+    font-size: 24px;
+    line-height: 1.2;
+    background: rgba(0, 0, 0, 0);
+    transition: background-color 250ms var(--cubic);
+    padding: 16px 0px;
+    padding-right: 40px;
+  }
+  .menu__list li > ul {
+    display: none;
+    position: relative;
+    width: 100%;
+    padding-left: 20px;
+    border-left: 1px solid var(--color);
+  }
+  .menu__list li > ul li a {
+    font-size: 16px;
+    padding: 10px 0px;
+    padding-right: 40px;
+  }
+  .menu__list li > ul li .menuArrow {
+    height: 36px;
+  }
+  .menu__list li .menuArrow {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 60px;
+  }
+  .menu__list li .menuArrow svg {
+    position: absolute;
+    transition: 250ms var(--cubic);
+    transform: rotate(0deg);
+    width: 20px;
+    height: 20px;
+    fill: var(--black);
+    pointer-events: none;
+  }
+  .menu__list li .menuArrow.is-hovered svg {
+    transform: rotate(-180deg);
+  }
 }
-
+/*DESCTOP*/
+@media screen and (min-width: 768px) {
+  .menu__list {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+  .menu__list > li {
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 16px;
+    z-index: 1;
+  }
+  .menu__list > li:first-child {
+    margin-left: 0px;
+  }
+  .menu__list > li:last-child {
+    margin-right: 0px;
+  }
+  .menu__list > li:hover > ul, .menu__list > li:focus > ul {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  .menu__list > li > a {
+    display: block;
+    position: relative;
+    color: inherit;
+    font-size: 18px;
+    line-height: 1.2;
+    background: rgba(0, 0, 0, 0);
+    transition: opacity 250ms var(--cubic);
+    padding: 16px 0px;
+  }
+  .menu__list > li > ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: absolute;
+    left: -20px;
+    top: 100%;
+    min-width: 238px;
+    border-radius: 14px;
+    transition: 250ms var(--cubic);
+    background: var(--button-color);
+    transform: translate(0px, 20px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .menu__list > li > ul li {
+    width: 100%;
+  }
+  .menu__list > li > ul li a {
+    display: block;
+    font-size: 16px;
+    padding: 10px 20px;
+    padding-right: 40px;
+    border-radius: 14px;
+    transition: 250ms var(--cubic);
+    background: rgba(0, 0, 0, 0);
+  }
+  .menu__list > li > ul li a:hover, .menu__list > li > ul li a:focus {
+    background: var(--button-color-hover);
+    color: var(--white);
+  }
+  .menu__list > li .menuArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+  }
+  .menu__list > li .menuArrow svg {
+    position: absolute;
+    transition: 250ms var(--cubic);
+    transform: rotate(0deg);
+    width: 100%;
+    height: 100%;
+    fill: var(--black);
+    pointer-events: none;
+  }
+  .menu__list > li .menuArrow.is-hovered svg {
+    transform: rotate(-180deg);
+  }
+}
 .formBox {
   display: block;
   max-width: 600px;
@@ -482,7 +584,7 @@
   border-color: transparent;
   color: #ffffff !important;
 }
-.button.smaller {
+.button.button--small {
   min-height: 48px;
   font-family: "ubuntu_light";
   font-size: 18px;
@@ -503,7 +605,14 @@
   width: 100%;
   background: #313131;
   color: #fff;
-  padding: 80px 0px;
+  padding: 50px 0px;
+}
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
 }
 
 /*-----------------------------FORMS*/
@@ -963,23 +1072,39 @@
 }
 
 /*standatr animations*/
-.animation {
-  opacity: 0;
-  transition: 0.8s cubic-bezier(0.14, 0.03, 0.02, 0.87) 0s;
-}
-.animation.anim--top {
-  transform: translate(0px, -20px);
-}
-.animation.anim--bottom {
-  transform: translate(0px, 20px);
-}
-.animation.anim--right {
-  transform: translate(20px, 0px);
-}
-.animation.anim--left {
+[data-animation=fade-left] {
   transform: translate(-20px, 0px);
 }
-.animation.animate {
+
+[data-animation=fade-right] {
+  transform: translate(20px, 0px);
+}
+
+[data-animation=fade-top] {
+  transform: translate(0px, -20px);
+}
+
+[data-animation=fade-bottom] {
+  transform: translate(0px, 20px);
+}
+
+[data-animation=fade-in],
+[data-animation=fade-left],
+[data-animation=fade-right],
+[data-animation=fade-top],
+[data-animation=fade-bottom] {
+  opacity: 0;
+  transition: opacity 0.8s var(--cubic), transform 0.8s var(--cubic);
+}
+[data-animation=fade-in].animate,
+[data-animation=fade-left].animate,
+[data-animation=fade-right].animate,
+[data-animation=fade-top].animate,
+[data-animation=fade-bottom].animate {
   transform: translate(0px, 0px);
   opacity: 1;
+}
+
+[data-animation=fade-in] {
+  transition: opacity 1.5s var(--cubic);
 }

@@ -1,0 +1,178 @@
+.menu {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 0px 40px;
+    width: auto;
+  }
+}
+
+/*MOBIL*/
+@media screen and (max-width: 767px) {
+  .menu__list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    li {
+      position: relative;
+      display: inline-flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1;
+      a {
+        display: block;
+        position: relative;
+        color: inherit;
+        //   white-space: nowrap;
+        width: 100%;
+        font-size: 24px;
+        line-height: 1.2;
+        background: rgba(0, 0, 0, 0);
+        transition: background-color 250ms var(--cubic);
+        padding: 16px 0px;
+        padding-right: 40px;
+      }
+      > ul {
+        display: none;
+        position: relative;
+        width: 100%;
+        padding-left: 20px;
+        border-left: 1px solid var(--color);
+        li {
+          a {
+            font-size: 16px;
+            padding: 10px 0px;
+            padding-right: 40px;
+          }
+          .menuArrow {
+            height: 36px;
+          }
+        }
+      }
+      .menuArrow {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 100%;
+        height: 60px;
+        svg {
+          position: absolute;
+          transition: 250ms var(--cubic);
+          transform: rotate(0deg);
+          width: 20px;
+          height: 20px;
+          fill: var(--black);
+          pointer-events: none;
+        }
+        &.is-hovered {
+          svg {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+/*DESCTOP*/
+@media screen and (min-width: 768px) {
+  .menu__list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    > li {
+      position: relative;
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0px 16px;
+      z-index: 1;
+      &:first-child {
+        margin-left: 0px;
+      }
+      &:last-child {
+        margin-right: 0px;
+      }
+      &:hover,
+      &:focus {
+        > ul {
+          transform: translate(0px, 0px);
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+        }
+      }
+      > a {
+        display: block;
+        position: relative;
+        color: inherit;
+        font-size: 18px;
+        line-height: 1.2;
+        background: rgba(0, 0, 0, 0);
+        transition: opacity 250ms var(--cubic);
+        padding: 16px 0px;
+      }
+      > ul {
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        position: absolute;
+        left: -20px;
+        top: 100%;
+        min-width: 238px;
+        border-radius: 14px;
+        transition: 250ms var(--cubic);
+        background: var(--button-color);
+        transform: translate(0px, 20px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        li {
+          width: 100%;
+          a {
+            display: block;
+            font-size: 16px;
+            padding: 10px 20px;
+            padding-right: 40px;
+            border-radius: 14px;
+            transition: 250ms var(--cubic);
+            background: rgba(0, 0, 0, 0);
+            &:hover,
+            &:focus {
+              background: var(--button-color-hover);
+              color: var(--white);
+            }
+          }
+        }
+      }
+      .menuArrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 16px;
+        height: 16px;
+        margin-left: 4px;
+        svg {
+          position: absolute;
+          transition: 250ms var(--cubic);
+          transform: rotate(0deg);
+          width: 100%;
+          height: 100%;
+          fill: var(--black);
+          pointer-events: none;
+        }
+        &.is-hovered {
+          svg {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
+}

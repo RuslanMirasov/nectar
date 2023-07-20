@@ -1,23 +1,57 @@
 <!--header-->
-<header class="header fix">
-  <div class="container">
+<header class="header">
+  <div class="container" data-animation="fade-top">
     <a href="./" class="logo">
-      <svg width="82" height="68"><use href="./img/icons.svg#logo"></use></svg>
-      <span>Logo</span>
+      <svg width="62" height="50"><use href="./img/icons.svg#logo"></use></svg>
     </a>
+    <!-- <div class="header__buttons">
+      <a href="tel:+37256469796">+372 5646 9796</a>
+      <ul class="language">
+        <li>
+          <b class="js-current-language">ru</b>
+          <ul>
+            <li data-lang="ru"><b>ru</b></li>
+            <li data-lang="en"><b>en</b></li>
+            <li data-lang="et"><b>et</b></li>
+          </ul>
+        </li>
+      </ul>
+    </div> -->
     <div class="menu-backdrop">
-      <button type="button" class="close-area" data-menu-open></button>
       <div class="menu-body">
         <nav class="menu">
-          <ul>
-            <!--data-scrollto="section--hero"-->
-            <li class="menu__item"><a href="./">Home</a></li>
-            <li class="menu__item"><a href="./">About</a></li>
-            <li class="menu__item"><a href="./">Service</a></li>
-            <li class="menu__item"><a href="./">Contact</a></li>
+          <ul class="menu__list">
+            <li>
+              <a href="./">spa-меню</a>
+              <ul>
+                <li><a href="./">Face and body</a></li>
+                <li><a href="./">Nails</a></li>
+                <li>
+                  <a href="./">Аппаратная косм - vibra</a>
+                  <ul>
+                    <li><a href="./">Face and body</a></li>
+                    <li><a href="./">Nails</a></li>
+                    <li><a href="./">Аппаратная косм - vibra</a></li>
+                    <li><a href="./">Ароматерапия</a></li>
+                    <li><a href="./">Day spa</a></li>
+                  </ul>
+                </li>
+                <li><a href="./">Ароматерапия</a></li>
+                <li><a href="./">Day spa</a></li>
+              </ul>
+            </li>
+            <li><a href="./">магазин</a></li>
+            <li><a href="./">школа</a></li>
+            <li><a href="./">о нас</a></li>
+            <li>
+              <a href="./">контакты</a>
+              <ul>
+                <li><a href="./">Face and body</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
-        <button class="button smaller" data-popup="request">сертификат</button>
+        <button class="button button--small" data-popup="request">сертификат</button>
       </div>
     </div>
     <button type="button" class="burger" data-menu-open><span>burger button</span></button>

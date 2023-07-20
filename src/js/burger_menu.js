@@ -9,7 +9,8 @@ let fixPadding = window.innerWidth - document.querySelector('.main').offsetWidth
 const menuBackdrop = document.querySelector('.menu-backdrop');
 const navigation = document.querySelector('.menu__list');
 const navigationItems = navigation.querySelectorAll('li');
-const arrowMarkup = `<div class="menuArrow"><svg class="menuList__arrow"><use href="./img/icons.svg#arr_down"></use></svg></div>`;
+const assetsPath = document.querySelector('.js-assets').value;
+const arrowMarkup = `<div class="menuArrow"><svg class="menuList__arrow"><use href="${assetsPath}icons.svg#arr_down"></use></svg></div>`;
 
 navigationItems.forEach(navItem => {
   if (navItem.querySelector('ul')) {
@@ -44,6 +45,7 @@ function menuToggle() {
   menu.classList.toggle('is-open');
   burger.classList.toggle('is-open');
   body.classList.toggle('lock');
+  closeOllSubmenus();
   scrollbarChange();
 }
 
@@ -65,4 +67,14 @@ function scrollbarChange() {
       fixedElement.style.paddingRight = '0px';
     }
   });
+}
+
+function closeOllSubmenus() {
+  if (window.innerWidth < 768 && !body.classList.contains('lock')) {
+    setTimeout(() => {
+      $('.menu__list ul').slideUp();
+      $('.menu__list ul').removeClass('is-hovered');
+      $('.menuArrow').removeClass('is-hovered');
+    }, 500);
+  }
 }

@@ -8,43 +8,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <title>SPA BY M.NECTAR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet" />
+    <title>SITE NAME</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     
     
-    <script type="module" crossorigin src="/nectar/assets/index-f919dccf.js"></script>
-    <link rel="stylesheet" href="/nectar/assets/index-26cbf462.css">
+    <script type="module" crossorigin src="/nectar/assets/index-82e77459.js"></script>
+    <link rel="stylesheet" href="/nectar/assets/index-446058d3.css">
   </head>
   <body class="body">
     <!-- preloader -->
 <div class="preloader">
-  <div class="preloader__procent">
-    <div class="preloader__svg"></div>
-    <p data-preloader>0%</p>
+  <div class="preloader__logo">
+    <svg><use href="/nectar/assets/icons-2a35c762.svg#logo"></use></svg>
   </div>
 </div>
 
     <!--header-->
 <header class="header">
-  <div class="container">
-    <a href="#" class="logo" data-scrollto="section--hero">
-      <svg width="40" height="36"><use href="/nectar/assets/icons-07f25a10.svg#logo"></use></svg>
-      <span>Product</span>
+  <div class="container" data-animation="fade-top">
+    <a href="./" class="logo">
+      <svg width="62" height="50"><use href="/nectar/assets/icons-2a35c762.svg#logo"></use></svg>
     </a>
+    <!-- <div class="header__buttons">
+      <a href="tel:+37256469796">+372 5646 9796</a>
+      <ul class="language">
+        <li>
+          <b class="js-current-language">ru</b>
+          <ul>
+            <li data-lang="ru"><b>ru</b></li>
+            <li data-lang="en"><b>en</b></li>
+            <li data-lang="et"><b>et</b></li>
+          </ul>
+        </li>
+      </ul>
+    </div> -->
     <div class="menu-backdrop">
-      <button type="button" class="close-area" data-menu-open></button>
       <div class="menu-body">
         <nav class="menu">
-          <ul>
-            <li class="menu__item"><a href="#" data-scrollto="section--hero">Home</a></li>
-            <li class="menu__item"><a href="#" data-scrollto="section--hero">About</a></li>
-            <li class="menu__item"><a href="#" data-scrollto="section--hero">Menu</a></li>
-            <li class="menu__item"><a href="#" data-scrollto="section--hero">Service</a></li>
-            <li class="menu__item"><a href="#" data-scrollto="section--hero">Contact</a></li>
+          <ul class="menu__list">
+            <li>
+              <a href="./">spa-меню</a>
+              <ul>
+                <li><a href="./">Face and body</a></li>
+                <li><a href="./">Nails</a></li>
+                <li>
+                  <a href="./">Аппаратная косм - vibra</a>
+                  <ul>
+                    <li><a href="./">Face and body</a></li>
+                    <li><a href="./">Nails</a></li>
+                    <li><a href="./">Аппаратная косм - vibra</a></li>
+                    <li><a href="./">Ароматерапия</a></li>
+                    <li><a href="./">Day spa</a></li>
+                  </ul>
+                </li>
+                <li><a href="./">Ароматерапия</a></li>
+                <li><a href="./">Day spa</a></li>
+              </ul>
+            </li>
+            <li><a href="./">магазин</a></li>
+            <li><a href="./">школа</a></li>
+            <li><a href="./">о нас</a></li>
+            <li>
+              <a href="./">контакты</a>
+              <ul>
+                <li><a href="./">Face and body</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
-        <button class="button" data-popup="request">button</button>
+        <button class="button button--small" data-popup="request">сертификат</button>
       </div>
     </div>
     <button type="button" class="burger" data-menu-open><span>burger button</span></button>
@@ -54,96 +87,33 @@
 
     <main class="main">
       <!--section Hero-->
-<section class="section section--hero">
-  <div class="container">
-    <div class="title-wrapp">
-      <h1 class="title title--h1">Title H1</h1>
-      <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      <button class="button" data-popup="request">button</button>
-    </div>
-    <div class="formBox">
-      <form action="#" method="POST" class="form" autocomplete="off" novalidate>
-        <input type="hidden" name="subject" class="subject" value="Order Form" />
-        <!-- name -->
-        <label class="label">
-          <span class="label__text">Name</span>
-          <input type="text" class="input" name="name" placeholder="Ruslan Mirasov" required />
-        </label>
-        <!-- Phone -->
-        <label class="label">
-          <span class="label__text">Phone number</span>
-          <input type="tel" class="input" name="phone" placeholder="+38 (0--) --- -- --" required />
-        </label>
-        <!-- Email -->
-        <label class="label">
-          <span class="label__text">Email</span>
-          <input type="email" class="input" name="email" placeholder="example@gmail.com" required />
-        </label>
-
-        <!-- Select -->
-        <label class="label label--select">
-          <span class="label__text">Select your skills</span>
-          <select name="skills" class="select">
-            <option value="HTML">HTML</option>
-            <option value="CSS">CSS</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="React">React</option>
-            <option value="Node">Node</option>
-          </select>
-        </label>
-
-        <!-- checkbox -->
-        <fieldset class="fieldset">
-          <legend class="fieldset__title">Select your skills</legend>
-          <label class="label label--checkbox">
-            <input type="checkbox" name="checkbox1" class="checkbox" value="Javascript" required />
-            <span class="label__text">Javascript</span>
-          </label>
-          <label class="label label--checkbox">
-            <input type="checkbox" name="checkbox1" class="checkbox" value="HTML" required />
-            <span class="label__text">HTML</span>
-          </label>
-          <label class="label label--checkbox">
-            <input type="checkbox" name="checkbox1" class="checkbox" value="CSS" />
-            <span class="label__text">CSS</span>
-          </label>
-        </fieldset>
-        <!-- radio -->
-        <fieldset class="fieldset">
-          <legend class="fieldset__title">Sex</legend>
-          <label class="label label--radio">
-            <input type="radio" name="sex" class="radio" value="Male" required />
-            <span class="label__text">Male</span>
-          </label>
-          <label class="label label--radio">
-            <input type="radio" name="sex" class="radio" value="Female" required />
-            <span class="label__text">Female</span>
-          </label>
-        </fieldset>
-        <!-- submit -->
-        <div class="label">
-          <button type="submit" class="button button--border medium button--submit" disabled>Send</button>
+      <section class="section section--hero" style="min-height: 100vh">
+        <div class="container">
+          <div class="title-wrapp" data-animation="fade-bottom">
+            <h1 class="title title--h1">Заголовок страницы</h1>
+            <p class="subtitle">Подарите своему телу полное погружение <br />в атмосферу расслабления</p>
+            <button class="button" data-popup="request">записаться</button>
+          </div>
         </div>
-        <!-- agree -->
-        <fieldset class="fieldset">
-          <label class="label label--checkbox full">
-            <input type="checkbox" name="agree" class="checkbox agree" value="agree" />
-            <span class="label__text">By clicking submit, you agree to our privacy policy</span>
-          </label>
-        </fieldset>
-      </form>
-    </div>
-  </div>
-</section>
-<!--section Hero end-->
+      </section>
+      <!--section Hero end-->
 
+      <!--section Hero-->
+      <section class="section section--hero" style="min-height: 100vh; background: #eee">
+        <div class="container">
+          <div class="title-wrapp">
+            <h1 class="title title--h1" data-animation="fade-right">Блок 2</h1>
+          </div>
+        </div>
+      </section>
+      <!--section Hero end-->
     </main>
     <!--footer-->
 <footer class="footer">
   <div class="container">
-    <a href="#" class="logo" data-scrollto="section--hero">
-      <svg width="40" height="36"><use href="/nectar/assets/icons-07f25a10.svg#logo"></use></svg>
-      <span>Product</span>
+    <!--data-scrollto="section--hero"-->
+    <a href="./" class="logo">
+      <svg width="82" height="68"><use href="/nectar/assets/icons-2a35c762.svg#logo"></use></svg>
     </a>
   </div>
 </footer>
@@ -155,7 +125,6 @@
 <!-- REQUEST -->
 <div class="modal is-hidden" id="request">
   <div class="popup__body">
-    <button type="button" class="close-area" data-popup-close></button>
     <div class="popup">
       <button class="popup__close" data-popup-close></button>
       <b class="popup-title">Order Form</b>
@@ -198,7 +167,6 @@
 <!-- OK -->
 <div class="modal is-hidden" id="ok">
   <div class="popup__body">
-    <button type="button" class="close-area" data-popup-close></button>
     <div class="popup">
       <button class="popup__close" data-popup-close></button>
       <b class="popup-title">Form was sended!</b>
@@ -208,7 +176,7 @@
 </div>
 <!-- MODAL POPUP END-->
 
-
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     
   </body>

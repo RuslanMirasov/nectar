@@ -9,6 +9,7 @@
   font-size: 19px;
   line-height: calc(27 / 20);
   background-color: #fff;
+  color: var(--black);
 
   &.lock {
     overflow-x: hidden;
@@ -19,15 +20,31 @@
 .container {
   position: relative;
   margin: 0 auto;
-  padding: 0px 20px;
-  @media screen and (max-width: 767px) {
+  height: 100%;
+
+  @media screen and (max-width: 479px) {
+    max-width: 375px;
+    padding: 0px 10px;
+  }
+  @media screen and (min-width: 480px) and (max-width: 743px) {
     max-width: 480px;
+    padding: 0px 16px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    max-width: 768px;
+  @media screen and (min-width: 744px) and (max-width: 1023px) {
+    max-width: 744px;
+    padding: 0px 20px;
   }
-  @media screen and (min-width: 1280px) {
-    max-width: 1280px;
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    max-width: 1024px;
+    padding: 0px 30px;
+  }
+  @media screen and (min-width: 1280px) and (max-width: 1439px) {
+    max-width: 1200px;
+    padding: 0px 30px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 1440px;
+    padding: 0px 50px;
   }
 }
 
@@ -35,5 +52,4 @@
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  padding: 100px 0px;
 }

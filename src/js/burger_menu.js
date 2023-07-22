@@ -1,3 +1,4 @@
+//BURGER MENU
 const openMenuBtn = document.querySelectorAll('[data-menu-open]');
 const menu = document.querySelector('.menu-backdrop');
 const burger = document.querySelector('.burger');
@@ -10,7 +11,7 @@ const menuBackdrop = document.querySelector('.menu-backdrop');
 const navigation = document.querySelector('.menu__list');
 const navigationItems = navigation.querySelectorAll('li');
 const assetsPath = document.querySelector('.js-assets').value;
-const arrowMarkup = `<div class="menuArrow"><svg class="menuList__arrow"><use href="${assetsPath}icons.svg#arr_down"></use></svg></div>`;
+const arrowMarkup = `<div class="menuArrow"><svg class="menuList__arrow"><use href="${assetsPath}img/icons.svg#arr_down"></use></svg></div>`;
 
 navigationItems.forEach(navItem => {
   if (navItem.querySelector('ul')) {
@@ -19,7 +20,7 @@ navigationItems.forEach(navItem => {
 });
 
 menuBackdrop.addEventListener('click', e => {
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 1054) {
     if (e.target.classList.contains('menu-backdrop')) {
       menuToggle();
     }
@@ -70,7 +71,7 @@ function scrollbarChange() {
 }
 
 function closeOllSubmenus() {
-  if (window.innerWidth < 768 && !body.classList.contains('lock')) {
+  if (window.innerWidth < 1054 && !body.classList.contains('lock')) {
     setTimeout(() => {
       $('.menu__list ul').slideUp();
       $('.menu__list ul').removeClass('is-hovered');

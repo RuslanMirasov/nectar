@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet" />
-    <title>SITE NAME</title>
+    <title>SPA by M.NECTAR</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/styles.min.css" />
@@ -19,21 +19,36 @@
     <load src="./partials/header.html" />
     <main class="main">
       <!--section Hero-->
-      <section class="section section--hero" style="min-height: 100vh">
+      <section class="section section--hero">
         <div class="container">
-          <div class="title-wrapp" data-animation="fade-bottom">
-            <h1 class="title title--h1">Заголовок страницы</h1>
-            <p class="subtitle">Подарите своему телу полное погружение <br />в атмосферу расслабления</p>
-            <button class="button" data-popup="request">записаться</button>
+          <div class="hero-bg">
+            <picture class="picture">
+              <source media="(min-width:1025px)" srcset="./img/hero-desktop.jpg" />
+              <source media="(min-width:481px)" srcset="./img/hero-tablet.jpg" />
+              <img src="./img/hero-mobil.jpg" alt="Flowers" width="320" height="568" />
+            </picture>
+          </div>
+          <div class="hero-content">
+            <h1 class="title title--h1" data-animation="fade-top" data-delay="0">
+              SPA<br />M.NECTAR
+              <svg width="52" height="24"><use href="./img/icons.svg#by"></use></svg>
+            </h1>
+            <p class="subtitle" data-animation="fade-top" data-delay="200">
+              <b>Wellness-территория красоты и баланса</b><br />
+              Подарите своему телу полное погружение в атмосферу расслабления
+            </p>
+            <div class="forBtn" data-animation="fade-top" data-delay="400">
+              <button class="button" data-popup="request">записаться</button>
+            </div>
           </div>
         </div>
       </section>
       <!--section Hero end-->
 
       <!--section Hero-->
-      <section class="section section--hero" style="min-height: 100vh; background: #eee">
+      <section class="section" style="min-height: 100vh; background: #eee">
         <div class="container">
-          <div class="title-wrapp">
+          <div class="titleBox">
             <h1 class="title title--h1" data-animation="fade-right">Блок 2</h1>
           </div>
         </div>
@@ -43,8 +58,9 @@
     <load src="./partials/footer.html" />
     <load src="./partials/popup.html" />
 
-    <input type="hidden" name="assets" class="js-assets" value="./assets" />
+    <input type="hidden" name="assets" class="js-assets" value="./" />
     <input type="hidden" name="url" class="js-url" value="./" />
+    <input type="hidden" name="poddomen" class="poddomen" value="" />
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

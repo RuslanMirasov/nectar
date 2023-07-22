@@ -1,15 +1,15 @@
 /*----------------------------------------------- TYPOGRAPHY */
 
-.title-wrapp {
+.titleBox {
   display: inline-block;
   width: 100%;
 }
 
-.title-wrapp > * {
+.titleBox > * {
   margin-top: 20px;
 }
 
-.title-wrapp > *:first-child {
+.titleBox > *:first-child {
   margin-top: 0px;
 }
 
@@ -17,31 +17,13 @@
   font-family: 'title';
   text-transform: uppercase;
   &.title--h1 {
-    @media screen and (max-width: 767px) {
-      font-size: 30px;
-    }
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-      font-size: 42px;
-    }
-    @media screen and (min-width: 1280px) {
-      font-size: 64px;
-    }
+    font-size: 42px;
   }
   &.title--h2 {
-    @media screen and (max-width: 767px) {
-      font-size: 20px;
-    }
-    @media screen and (min-width: 768px) {
-      font-size: 32px;
-    }
+    font-size: 32px;
   }
 }
 
 .subtitle {
-  @media screen and (max-width: 767px) {
-    font-size: 36px;
-  }
-  @media screen and (min-width: 768px) {
-    font-size: 20px;
-  }
+  font-size: 20px;
 }

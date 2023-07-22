@@ -8,26 +8,86 @@
   z-index: 20;
   width: 100%;
   transition: background-color 250ms var(--cubic), box-shadow 250ms var(--cubic);
+
   &.fix {
     background: var(--bg);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    .container {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    .logo {
+      width: 62px;
+      height: 50px;
+      svg {
+        fill: var(--black) !important;
+      }
+    }
+    .menu__list > li > a,
+    .header__buttons a,
+    .js-current-language {
+      color: var(--black) !important;
+    }
+    .menu__list > li > .menuArrow svg {
+      fill: var(--black) !important;
+    }
+    .burger:before,
+    .burger:after,
+    .burger span {
+      background: var(--black) !important;
+    }
   }
+
+  &.header--light {
+    .header__buttons a,
+    .js-current-language {
+      color: var(--white);
+    }
+    @media screen and (min-width: 1054px) {
+      .menu__list > li > a {
+        color: var(--white);
+      }
+      .menu__list > li > .menuArrow svg {
+        fill: var(--white);
+      }
+    }
+    .logo svg {
+      fill: var(--white);
+    }
+    .burger:before,
+    .burger:after,
+    .burger span {
+      background: var(--white);
+    }
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1280px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    @media screen and (max-width: 767px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: 500ms var(--cubic);
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+    @media screen and (max-width: 1023px) {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    @media screen and (max-width: 1279px) {
+      max-width: 100%;
+    }
+    @media screen and (max-width: 1053px) {
       flex-wrap: wrap;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1054px) {
       flex-wrap: nowrap;
     }
   }
   .button {
-    order: 2;
+    order: 1;
   }
 }
 
@@ -35,8 +95,12 @@
   display: inline-flex;
   align-items: center;
   margin-right: 20px;
+  transition: 500ms var(--cubic);
   svg {
+    transition: 500ms var(--cubic);
     display: block;
+    width: 100%;
+    height: 100%;
     fill: currentColor;
   }
   span {
@@ -45,11 +109,21 @@
     font-size: 30px;
     line-height: calc(30 / 28);
   }
+
+  @media screen and (max-width: 1439px) {
+    width: 62px;
+    height: 50px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 82px;
+    height: 66px;
+  }
 }
 
 .menu-backdrop {
   width: 100%;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1053px) {
     display: block;
     width: 100%;
     height: 100%;
@@ -81,7 +155,7 @@
   display: flex;
   flex-wrap: wrap;
   height: auto;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1053px) {
     justify-content: space-between;
     align-items: flex-start;
     align-content: space-between;
@@ -103,21 +177,9 @@
       margin-top: 40px;
     }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1054px) {
     justify-content: flex-end;
     align-items: center;
-  }
-}
-
-.header__buttons {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: auto;
-  order: 1;
-  a {
-    white-space: nowrap;
   }
 }
 
@@ -127,8 +189,10 @@
   align-items: center;
   position: relative;
   z-index: 3;
-  width: 36px;
-  height: 26px;
+  width: 32px;
+  height: 24px;
+  order: 3;
+  margin-left: 20px;
   cursor: pointer;
   &:before,
   &:after,
@@ -137,9 +201,8 @@
     position: absolute;
     width: 100%;
     height: 2px;
-    border-radius: 2px;
     background: var(--black);
-    transition: 600ms var(--cubic);
+    transition: 500ms var(--cubic);
     font-size: 0px;
   }
   span {
@@ -156,18 +219,93 @@
     span {
       opacity: 0;
       transform: translate(100%, 0%);
+      background: var(--black) !important;
     }
     &:before {
       transform: rotate(45deg) translate(0%, 0%);
+      background: var(--black) !important;
     }
     &:after {
       transform: rotate(-45deg) translate(0%, 0%);
+      background: var(--black) !important;
     }
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1053px) {
     display: flex;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1054px) {
     display: none;
+  }
+}
+
+.header__buttons {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: auto;
+  gap: 20px;
+  order: 1;
+  font-family: 'ubuntu_medium';
+  a {
+    font-size: 19px;
+    line-height: 24px;
+    white-space: nowrap;
+    transition: 500ms var(--cubic);
+  }
+}
+
+.language {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  p {
+    font-size: 19px;
+    line-height: 24px;
+    pointer-events: none;
+    transition: 500ms var(--cubic);
+  }
+  ul {
+    position: absolute;
+    transition: 250ms var(--cubic);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0px, 20px);
+    top: 100%;
+    gap: 10px;
+    padding-top: 20px;
+    cursor: pointer;
+    li {
+      transition: 250ms var(--cubic);
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6px 20px;
+      border-radius: 5px;
+      background: var(--white);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+      &:hover,
+      &:focus {
+        background: var(--button-color);
+      }
+    }
+  }
+  &.is-open {
+    ul {
+      pointer-events: all;
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0px, 0px);
+    }
   }
 }

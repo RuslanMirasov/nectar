@@ -1,6 +1,6 @@
 /*responsive css styles*/
-$maxWidth: 1280;
-$maxWidthContainer: 1280;
+$maxWidth: 1440;
+$maxWidthContainer: 1440;
 
 @mixin css-r($property, $startSize, $minSize, $type) {
   $addSize: $startSize - $minSize;

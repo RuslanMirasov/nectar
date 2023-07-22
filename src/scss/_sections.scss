@@ -1,0 +1,105 @@
+// .section--hero {
+//   padding-top: 100px;
+//   padding-bottom: 100px;
+//   //320
+//   @media screen and (max-width: 479px) {}
+//   //480
+//   @media screen and (min-width: 480px) and (max-width: 743px) {}
+//   //744
+//   @media screen and (min-width: 744px) and (max-width: 1023px) {}
+//   //1024
+//   @media screen and (min-width: 1024px) and (max-width: 1439px) {}
+//   //1440
+//   @media screen and (min-width: 1440px) {}
+// }
+
+// SECTION HERO
+.section--hero {
+  max-height: 100vh;
+
+  .container {
+    display: flex;
+    align-items: flex-end;
+    @media screen and (min-width: 0px) and (max-width: 1279px) {
+      max-width: 100%;
+    }
+  }
+
+  .hero-bg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: var(--black);
+    border-radius: 0px 0px 60px 60px;
+    overflow: hidden;
+    z-index: 1;
+    @media screen and (max-width: 1279px) {
+      border-radius: 0px 0px 30px 30px;
+    }
+    .picture,
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: var(--white);
+    position: relative;
+    z-index: 2;
+    gap: 24px;
+    .button {
+      margin-top: 10px;
+    }
+  }
+  //320
+  @media screen and (max-width: 479px) {
+    height: 568px;
+    .hero-content {
+      padding-bottom: 33px;
+      .forBtn,
+      .button {
+        width: 100%;
+      }
+    }
+  }
+  //480
+  @media screen and (min-width: 480px) and (max-width: 743px) {
+    height: 568px;
+    .hero-content {
+      padding-bottom: 40px;
+    }
+  }
+  //744
+  @media screen and (min-width: 744px) and (max-width: 1023px) {
+    height: 568px;
+    .hero-content {
+      padding-bottom: 70px;
+    }
+  }
+  //1024
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    height: 700px;
+    .hero-content {
+      padding-bottom: 50px;
+    }
+  }
+  //1440
+  @media screen and (min-width: 1440px) {
+    height: 772px;
+    .hero-content {
+      padding-bottom: 64px;
+    }
+  }
+}

@@ -1,9 +1,14 @@
 const mainContent = document.querySelector('.main');
 const header = document.querySelector('.header');
+const sectionHero = document.querySelector('.section--hero');
 let headerHeight = 0;
 
-window.addEventListener('load', mainPaddingTop);
-window.addEventListener('resize', mainPaddingTop);
+if (!sectionHero) {
+  window.addEventListener('load', mainPaddingTop);
+  window.addEventListener('resize', mainPaddingTop);
+} else {
+  header.classList.add('header--light');
+}
 
 // MAIN PADDING-TOP OPTIONS
 function mainPaddingTop() {

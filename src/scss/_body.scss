@@ -51,8 +51,6 @@
 
 .section {
   position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .link {
@@ -87,6 +85,12 @@
 .show_in1024 {
   display: inline-block;
   @media screen and (min-width: 1440px) {
+    display: none !important;
+  }
+}
+
+.del_in1280 {
+  @media screen and (max-width: 1279px) {
     display: none !important;
   }
 }

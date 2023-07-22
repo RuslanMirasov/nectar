@@ -25,18 +25,26 @@
 [data-animation='fade-bottom'] {
   transform: translate(0px, 20px);
 }
+[data-animation='scale'] {
+  transform: translate(0px, 0px) scale(0.8);
+  transform-origin: center center;
+}
 [data-animation='fade-in'],
 [data-animation='fade-left'],
 [data-animation='fade-right'],
 [data-animation='fade-top'],
-[data-animation='fade-bottom'] {
+[data-animation='fade-bottom'],
+[data-animation='scale'] {
   opacity: 0;
   transition: opacity 0.8s var(--cubic), transform 0.8s var(--cubic);
   &.animate {
-    transform: translate(0px, 0px);
+    transform: translate(0px, 0px) scale(1);
     opacity: 1;
   }
 }
 [data-animation='fade-in'] {
   transition: opacity 1.5s var(--cubic);
+}
+[data-animation='scale'] {
+  transition: opacity 1s var(--cubic), transform 1s var(--cubic);
 }

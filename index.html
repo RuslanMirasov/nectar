@@ -9,18 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet" />
-    <title>SITE NAME</title>
+    <title>SPA by M.NECTAR</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     
     
-    <script type="module" crossorigin src="/nectar/assets/index-283537e2.js"></script>
-    <link rel="stylesheet" href="/nectar/assets/index-446058d3.css">
+    <script type="module" crossorigin src="/nectar/assets/index-95f43ce7.js"></script>
+    <link rel="stylesheet" href="/nectar/assets/index-174a8930.css">
   </head>
   <body class="body">
     <!-- preloader -->
 <div class="preloader">
   <div class="preloader__logo">
-    <svg><use href="/nectar/assets/icons-2a35c762.svg#logo"></use></svg>
+    <svg><use href="/nectar/assets/icons-56dbfb74.svg#logo"></use></svg>
   </div>
 </div>
 
@@ -28,21 +28,19 @@
 <header class="header">
   <div class="container" data-animation="fade-top">
     <a href="./" class="logo">
-      <svg width="62" height="50"><use href="/nectar/assets/icons-2a35c762.svg#logo"></use></svg>
+      <svg width="62" height="50"><use href="/nectar/assets/icons-56dbfb74.svg#logo"></use></svg>
     </a>
-    <!-- <div class="header__buttons">
+    <div class="header__buttons">
       <a href="tel:+37256469796">+372 5646 9796</a>
-      <ul class="language">
-        <li>
-          <b class="js-current-language">ru</b>
-          <ul>
-            <li data-lang="ru"><b>ru</b></li>
-            <li data-lang="en"><b>en</b></li>
-            <li data-lang="et"><b>et</b></li>
-          </ul>
-        </li>
-      </ul>
-    </div> -->
+      <div class="language">
+        <p class="js-current-language">ru</p>
+        <ul>
+          <li class="language__link" data-language="ru">ru</li>
+          <li class="language__link" data-language="en">en</li>
+          <li class="language__link" data-language="et">et</li>
+        </ul>
+      </div>
+    </div>
     <div class="menu-backdrop">
       <div class="menu-body">
         <nav class="menu">
@@ -51,36 +49,32 @@
               <a href="./">spa-меню</a>
               <ul>
                 <li><a href="./">Face and body</a></li>
-                <li><a href="./">Nails</a></li>
                 <li>
-                  <a href="./">Аппаратная косм - vibra</a>
+                  <a href="./">Nails</a>
                   <ul>
-                    <li><a href="./">Face and body</a></li>
-                    <li><a href="./">Nails</a></li>
-                    <li><a href="./">Аппаратная косм - vibra</a></li>
-                    <li><a href="./">Ароматерапия</a></li>
-                    <li><a href="./">Day spa</a></li>
+                    <li><a href="./">Пункт подменю 1</a></li>
+                    <li><a href="./">Пункт подменю 2</a></li>
+                    <li><a href="./">Пункт подменю 3</a></li>
+                    <li>
+                      <a href="./">Пункт подменю 4</a>
+                      <ul>
+                        <li><a href="./">Пункт 1</a></li>
+                        <li><a href="./">Пункт 2</a></li>
+                        <li><a href="./">Пункт 3</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="./">Пункт подменю 5</a></li>
                   </ul>
                 </li>
+                <li><a href="./">Аппаратная косм - vibra</a></li>
                 <li><a href="./">Ароматерапия</a></li>
                 <li><a href="./">Day spa</a></li>
               </ul>
             </li>
             <li><a href="./">магазин</a></li>
             <li><a href="./">школа</a></li>
-            <li>
-              <a href="./">о нас</a>
-              <ul>
-                <li><a href="./">Face and body</a></li>
-                <li><a href="./">Face and body</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="./">контакты</a>
-              <ul>
-                <li><a href="./">Face and body</a></li>
-              </ul>
-            </li>
+            <li><a href="./">о нас</a></li>
+            <li><a href="./">контакты</a></li>
           </ul>
         </nav>
         <button class="button button--small" data-popup="request">сертификат</button>
@@ -93,21 +87,36 @@
 
     <main class="main">
       <!--section Hero-->
-      <section class="section section--hero" style="min-height: 100vh">
+      <section class="section section--hero">
         <div class="container">
-          <div class="title-wrapp" data-animation="fade-bottom">
-            <h1 class="title title--h1">Заголовок страницы</h1>
-            <p class="subtitle">Подарите своему телу полное погружение <br />в атмосферу расслабления</p>
-            <button class="button" data-popup="request">записаться</button>
+          <div class="hero-bg">
+            <picture class="picture">
+              <source media="(min-width:1025px)" srcset="/nectar/assets/hero-desktop-e37ab01c.jpg " />
+              <source media="(min-width:481px)" srcset="/nectar/assets/hero-tablet-c3ce70a7.jpg " />
+              <img src="/nectar/assets/hero-mobil-7df93ea1.jpg" alt="Flowers" width="320" height="568" />
+            </picture>
+          </div>
+          <div class="hero-content">
+            <h1 class="title title--h1" data-animation="fade-top" data-delay="0">
+              SPA<br />M.NECTAR
+              <svg width="52" height="24"><use href="/nectar/assets/icons-56dbfb74.svg#by"></use></svg>
+            </h1>
+            <p class="subtitle" data-animation="fade-top" data-delay="200">
+              <b>Wellness-территория красоты и баланса</b><br />
+              Подарите своему телу полное погружение в атмосферу расслабления
+            </p>
+            <div class="forBtn" data-animation="fade-top" data-delay="400">
+              <button class="button" data-popup="request">записаться</button>
+            </div>
           </div>
         </div>
       </section>
       <!--section Hero end-->
 
       <!--section Hero-->
-      <section class="section section--hero" style="min-height: 100vh; background: #eee">
+      <section class="section" style="min-height: 100vh; background: #eee">
         <div class="container">
-          <div class="title-wrapp">
+          <div class="titleBox">
             <h1 class="title title--h1" data-animation="fade-right">Блок 2</h1>
           </div>
         </div>
@@ -119,7 +128,7 @@
   <div class="container">
     <!--data-scrollto="section--hero"-->
     <a href="./" class="logo">
-      <svg width="82" height="68"><use href="/nectar/assets/icons-2a35c762.svg#logo"></use></svg>
+      <svg width="122" height="104"><use href="/nectar/assets/icons-56dbfb74.svg#logo"></use></svg>
     </a>
   </div>
 </footer>
@@ -183,8 +192,9 @@
 <!-- MODAL POPUP END-->
 
 
-    <input type="hidden" name="assets" class="js-assets" value="./assets" />
+    <input type="hidden" name="assets" class="js-assets" value="./" />
     <input type="hidden" name="url" class="js-url" value="./" />
+    <input type="hidden" name="poddomen" class="poddomen" value="" />
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

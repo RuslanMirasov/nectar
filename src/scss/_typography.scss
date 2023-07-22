@@ -16,14 +16,126 @@
 .title {
   font-family: 'title';
   text-transform: uppercase;
+  font-weight: normal;
   &.title--h1 {
-    font-size: 42px;
+    line-height: 1.1;
+    position: relative;
+    padding-left: 30px;
+
+    svg {
+      position: absolute;
+      left: 0px;
+    }
+    @media screen and (max-width: 743px) {
+      font-size: 40px;
+      padding-left: 20px;
+      margin-bottom: -12px;
+      svg {
+        bottom: 12px;
+        width: 14px;
+        height: 28px;
+      }
+    }
+    @media screen and (min-width: 744px) and (max-width: 1023px) {
+      font-size: 70px;
+      padding-left: 30px;
+      svg {
+        bottom: 19px;
+        width: 22px;
+        height: 48px;
+      }
+    }
+    @media screen and (max-width: 1439px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+      font-size: 84px;
+      padding-left: 40px;
+      svg {
+        bottom: 22px;
+        width: 33px;
+        height: 70px;
+      }
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 80px;
+      margin-bottom: -21px;
+      svg {
+        bottom: 21px;
+      }
+    }
   }
   &.title--h2 {
-    font-size: 32px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    line-height: 1.1;
+    svg {
+      display: inline-block;
+    }
+    @media screen and (max-width: 1439px) {
+      font-size: 28px;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 60px;
+    }
+  }
+  &.title--h3 {
+    line-height: 1.1;
+    @media screen and (max-width: 1439px) {
+      font-size: 28px;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 55px;
+    }
+  }
+  &.title--h4 {
+    line-height: 1.1;
+    @media screen and (max-width: 1439px) {
+      font-size: 16px;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 35px;
+    }
+  }
+  &.title--h5 {
+    line-height: 1.35;
+    @media screen and (max-width: 1439px) {
+      font-size: 16px;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 28px;
+    }
+  }
+  &.title--h6 {
+    line-height: 1.35;
+    @media screen and (max-width: 1439px) {
+      font-size: 16px;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 25px;
+    }
+  }
+  &.title--h7 {
+    line-height: 1.35;
+    @media screen and (max-width: 1439px) {
+      font-size: 16px;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 22px;
+    }
   }
 }
 
 .subtitle {
   font-size: 20px;
+  line-height: 1.35;
+  &.small {
+    font-size: 18px;
+  }
+  b {
+    font-family: 'ubuntu_regular';
+    font-weight: normal;
+  }
 }

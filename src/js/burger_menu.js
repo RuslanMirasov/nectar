@@ -16,6 +16,7 @@ const arrowMarkup = `<div class="menuArrow"><svg class="menuList__arrow"><use hr
 navigationItems.forEach(navItem => {
   if (navItem.querySelector('ul')) {
     navItem.insertAdjacentHTML('beforeend', arrowMarkup);
+    navItem.querySelector('a').style.pointerEvents = 'none';
   }
 });
 

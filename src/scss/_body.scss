@@ -7,6 +7,7 @@
   min-height: 100vh;
   font-family: 'ubuntu_light', sans-serif;
   font-size: 19px;
+  font-weight: normal;
   line-height: calc(27 / 20);
   background-color: #fff;
   color: var(--black);
@@ -52,4 +53,40 @@
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+.link {
+  display: inline-block;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: auto;
+    right: 0px;
+    transition: width 250ms var(--cubic);
+    width: 0%;
+    height: 1px;
+    background: var(--black);
+  }
+  &:hover,
+  &:focus {
+    &:before {
+      width: 100%;
+      left: 0px;
+      right: auto;
+    }
+  }
+}
+
+.del_in1024 {
+  @media screen and (max-width: 1439px) {
+    display: none !important;
+  }
+}
+.show_in1024 {
+  display: inline-block;
+  @media screen and (min-width: 1440px) {
+    display: none !important;
+  }
 }

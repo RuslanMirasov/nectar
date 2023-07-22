@@ -29,6 +29,9 @@
   color: var(--black);
   transition: 250ms var(--cubic);
   cursor: pointer;
+  @media screen and (max-width: 1439px) {
+    min-height: 50px;
+  }
   &:hover,
   &:focus {
     background: var(--button-color-hover);

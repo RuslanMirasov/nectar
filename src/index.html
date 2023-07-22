@@ -23,18 +23,18 @@
         <div class="container">
           <div class="hero-bg">
             <picture class="picture">
-              <source media="(min-width:1025px)" srcset="./img/hero-desktop.jpg" />
-              <source media="(min-width:481px)" srcset="./img/hero-tablet.jpg" />
-              <img src="./img/hero-mobil.jpg" alt="Flowers" width="320" height="568" />
+              <source media="(min-width:1025px)" srcset="./img/hero-desktop.jpg 1x, ./img/hero-desktop@2x.jpg 2x" />
+              <source media="(min-width:481px)" srcset="./img/hero-tablet.jpg 1x, ./img/hero-tablet@2x.jpg 2x" />
+              <img srcset="./img/hero-mobil.jpg 1x, ./img/hero-mobil@2x.jpg 2x" src="./img/hero-mobil.jpg" alt="Flowers" width="320" height="568" />
             </picture>
           </div>
           <div class="hero-content">
             <h1 class="title title--h1" data-animation="fade-top" data-delay="0">
               SPA<br />M.NECTAR
-              <svg width="52" height="24"><use href="./img/icons.svg#by"></use></svg>
+              <svg width="24" height="52"><use href="./img/icons.svg#by"></use></svg>
             </h1>
-            <p class="subtitle" data-animation="fade-top" data-delay="200">
-              <b>Wellness-территория красоты и баланса</b><br />
+            <p class="subtitle small" data-animation="fade-top" data-delay="200">
+              <b>Wellness-территория красоты и баланса</b>
               Подарите своему телу полное погружение в атмосферу расслабления
             </p>
             <div class="forBtn" data-animation="fade-top" data-delay="400">
@@ -46,13 +46,13 @@
       <!--section Hero end-->
 
       <!--section Hero-->
-      <section class="section" style="min-height: 100vh; background: #eee">
+      <!-- <section class="section" style="min-height: 100vh; background: #eee">
         <div class="container">
           <div class="titleBox">
             <h1 class="title title--h1" data-animation="fade-right">Блок 2</h1>
           </div>
         </div>
-      </section>
+      </section> -->
       <!--section Hero end-->
     </main>
     <load src="./partials/footer.html" />

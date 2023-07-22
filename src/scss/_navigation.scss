@@ -27,7 +27,6 @@
         display: block;
         position: relative;
         color: inherit;
-        //   white-space: nowrap;
         width: 100%;
         font-size: 24px;
         line-height: 1.2;
@@ -94,6 +93,15 @@
       align-items: center;
       margin: 0px 16px;
       z-index: 1;
+      &:hover,
+      &:focus {
+        > a {
+          color: var(--button-color-hover);
+        }
+        > .menuArrow svg {
+          fill: var(--button-color-hover);
+        }
+      }
 
       &:first-child {
         margin-left: 0px;
@@ -117,9 +125,9 @@
         font-size: 18px;
         line-height: 1.2;
         background: rgba(0, 0, 0, 0);
-        transition: opacity 320ms var(--cubic);
-        pointer-events: none;
         padding: 16px 0px;
+        cursor: pointer;
+        transition: 320ms var(--cubic);
       }
       /*2 LEVEL*/
       > ul {

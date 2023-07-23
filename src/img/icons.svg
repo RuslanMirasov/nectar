@@ -30,4 +30,14 @@
       <path d="M-127 1C-1.5 1 286.3 105 433.5 521C580.7 937 1232.17 881.667 1539.5 802" stroke="black"/>
    </symbol>
 
+   <symbol viewBox="0 0 1340 507" preserveAspectRatio="none" fill="none" id="wellness-line" >
+      <path d="M1340 1C1287.19 1 1102.95 251.688 950.902 258.617C812.094 264.944 759.616 195.589 599.458 233.106C321.874 298.13 248.399 549.072 0.99995 499.583" stroke="black"/>
+   </symbol>
+
+
+
+
+
+
+
 </svg>

@@ -62,32 +62,32 @@
 }
 @media screen and (max-width: 479px) {
   .container {
-    max-width: 375px;
     padding: 0px 10px;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 743px) {
   .container {
-    max-width: 480px;
     padding: 0px 16px;
   }
 }
 @media screen and (min-width: 744px) and (max-width: 1023px) {
   .container {
-    max-width: 744px;
     padding: 0px 20px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   .container {
-    max-width: 1024px;
     padding: 0px 30px;
   }
 }
 @media screen and (min-width: 1280px) and (max-width: 1439px) {
   .container {
-    max-width: 1200px;
     padding: 0px 30px;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .container {
+    max-width: 100%;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -231,6 +231,7 @@
 }
 @media screen and (max-width: 1279px) {
   .title.title--h2 {
+    line-height: 1.2;
     font-size: 28px;
   }
 }
@@ -316,6 +317,16 @@
   font-family: "ubuntu_regular";
   font-weight: normal;
 }
+@media screen and (max-width: 1279px) {
+  .subtitle {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .subtitle.small {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}
 
 /*----------------------------------------------- PRELOADER*/
 .preloader {
@@ -392,7 +403,7 @@
   padding-bottom: 8px;
 }
 .header.fix .logo {
-  width: 75px;
+  width: 60px;
   height: 54px;
 }
 .header.fix .logo svg {
@@ -1200,6 +1211,284 @@
   .abot-images .about-images__item:nth-child(2) img {
     width: 100%;
     transform: translate(0%, 0%);
+  }
+}
+
+.section--wellness {
+  padding: 80px 0px;
+}
+.section--wellness .titleBox .title--h5 {
+  display: block;
+  margin-top: 50px;
+  max-width: 586px;
+}
+@media screen and (max-width: 1279px) {
+  .section--wellness {
+    padding: 60px 0px;
+  }
+  .section--wellness .titleBox .title--h5 {
+    margin-top: 32px;
+    max-width: 448px;
+  }
+}
+
+.wellnesses {
+  width: 100%;
+  position: relative;
+  margin-top: 90px;
+}
+.wellnesses .wellness {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 50px;
+}
+.wellnesses .wellness.wellness--dop .picture, .wellnesses .wellness.wellness--dop2 .picture {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.wellnesses .wellness.wellness--dop .picture img, .wellnesses .wellness.wellness--dop2 .picture img {
+  width: 100%;
+  height: 100%;
+}
+.wellnesses .wellness .text {
+  padding: 70px;
+  position: relative;
+  z-index: 2;
+}
+.wellnesses .wellness .text .title {
+  width: 100%;
+  margin-bottom: 12px;
+}
+@media screen and (max-width: 1279px) {
+  .wellnesses {
+    margin-top: 40px;
+  }
+  .wellnesses .wellness {
+    border-radius: 20px;
+  }
+  .wellnesses .wellness .text {
+    padding: 32px;
+  }
+  .wellnesses .wellness .text .title {
+    margin-bottom: 14px;
+  }
+}
+@media screen and (max-width: 743px) {
+  .wellnesses .wellness .text {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .wellnesses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .wellnesses .wellness {
+    width: 100%;
+  }
+  .wellnesses .wellness.wellness--dop, .wellnesses .wellness.wellness--dop2 {
+    display: none;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 743px) {
+  .wellnesses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+  }
+  .wellnesses .wellness--one {
+    grid-area: 1/1/3/2;
+  }
+  .wellnesses .wellness--two {
+    grid-area: 1/2/4/3;
+  }
+  .wellnesses .wellness--two .picture {
+    display: none;
+  }
+  .wellnesses .wellness--dop {
+    grid-area: 3/1/6/2;
+  }
+  .wellnesses .wellness--three {
+    grid-area: 4/2/6/3;
+  }
+  .wellnesses .wellness--three .picture {
+    display: none;
+  }
+  .wellnesses .wellness--four {
+    grid-area: 6/1/8/2;
+  }
+  .wellnesses .wellness--dop2 {
+    grid-area: 6/2/8/3;
+  }
+}
+@media screen and (min-width: 744px) {
+  .wellnesses .wellness--dop2,
+.wellnesses .wellness--dop {
+    display: none;
+  }
+}
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .wellnesses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}
+@media screen and (min-width: 744px) and (max-width: 1023px) and (min-width: 910px) {
+  .wellnesses {
+    grid-template-rows: repeat(9, 1fr);
+  }
+}
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .wellnesses .wellness--one {
+    grid-area: 1/2/3/3;
+  }
+}
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .wellnesses .wellness--two {
+    grid-area: 1/1/5/2;
+  }
+  .wellnesses .wellness--two .picture {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+  }
+}
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .wellnesses .wellness--three {
+    grid-area: 5/1/9/3;
+  }
+}
+@media screen and (min-width: 744px) and (max-width: 1023px) and (min-width: 910px) {
+  .wellnesses .wellness--three {
+    grid-area: 5/1/10/3;
+  }
+}
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .wellnesses .wellness--three .picture {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 73.5%;
+    height: 100%;
+  }
+  .wellnesses .wellness--three .picture img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .wellnesses .wellness--three .text {
+    max-width: 26.5%;
+  }
+}
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .wellnesses .wellness--four {
+    grid-area: 3/2/5/3;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .wellnesses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  .wellnesses .wellness--one {
+    grid-area: 1/2/2/3;
+  }
+  .wellnesses .wellness--two {
+    grid-area: 1/1/3/2;
+  }
+  .wellnesses .wellness--two .picture {
+    position: absolute;
+    bottom: 0;
+  }
+  .wellnesses .wellness--three {
+    grid-area: 1/3/3/4;
+  }
+  .wellnesses .wellness--four {
+    grid-area: 2/2/3/3;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .wellnesses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+  }
+  .wellnesses .text {
+    max-width: 507px;
+  }
+  .wellnesses .wellness--one {
+    grid-area: 1/1/3/2;
+  }
+  .wellnesses .wellness--two {
+    grid-area: 1/2/5/3;
+  }
+  .wellnesses .wellness--two .picture {
+    display: none;
+  }
+  .wellnesses .wellness--three {
+    grid-area: 3/1/7/2;
+  }
+  .wellnesses .wellness--three .picture {
+    display: none;
+  }
+  .wellnesses .wellness--four {
+    grid-area: 5/2/7/3;
+  }
+}
+
+.wellness-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  left: 0px;
+  bottom: 10%;
+  z-index: 2;
+  pointer-events: none;
+}
+.wellness-line img {
+  display: block;
+  position: absolute;
+}
+.wellness-line img.wellness-line1 {
+  right: 3%;
+  top: 2%;
+}
+.wellness-line img.wellness-line2 {
+  left: 5%;
+  bottom: -5%;
+}
+.wellness-line svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+@media screen and (max-width: 1279px) {
+  .wellness-line {
+    display: none;
   }
 }
 

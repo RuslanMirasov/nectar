@@ -78,13 +78,13 @@
 }
 
 .del_in1024 {
-  @media screen and (max-width: 1439px) {
+  @media screen and (max-width: 1279px) {
     display: none !important;
   }
 }
 .show_in1024 {
   display: inline-block;
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1280px) {
     display: none !important;
   }
 }

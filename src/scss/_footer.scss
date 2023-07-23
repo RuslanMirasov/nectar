@@ -8,7 +8,7 @@
     padding-top: 32px;
     padding-bottom: 32px;
   }
-  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+  @media screen and (min-width: 1024px) and (max-width: 1279px) {
     padding-top: 40px;
   }
   .container {
@@ -16,9 +16,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 40px;
+
     @media screen and (max-width: 1439px) {
-      gap: 20px;
       max-width: 100%;
+    }
+    @media screen and (max-width: 1279px) {
+      gap: 20px;
     }
   }
 }
@@ -30,10 +33,10 @@
   align-content: space-between;
   width: calc(50% - 20px);
   gap: 40px;
-  @media screen and (max-width: 1439px) {
+  @media screen and (max-width: 1279px) {
     gap: 20px;
   }
-  @media screen and (min-width: 745px) and (max-width: 1439px) {
+  @media screen and (min-width: 745px) and (max-width: 1279px) {
     width: calc(50% - 10px);
   }
   @media screen and (max-width: 744px) {
@@ -43,8 +46,9 @@
     .full {
       gap: 30px;
       min-height: 275px;
+      justify-content: center;
       align-content: center;
-      @media screen and (max-width: 1439px) {
+      @media screen and (max-width: 1279px) {
         justify-content: space-between;
         gap: 24px;
         min-height: auto;
@@ -53,14 +57,23 @@
         font-family: 'title';
         font-weight: normal;
         line-height: 1.1;
-        width: 100%;
+        width: auto;
         &.mail {
           font-size: 35px;
         }
         &.phone {
           font-size: 50px;
         }
-        @media screen and (max-width: 1439px) {
+        @media screen and (min-width: 1280px) and (max-width: 1439px) {
+          &.mail {
+            font-size: 30px;
+          }
+          &.phone {
+            font-size: 45px;
+          }
+        }
+        @media screen and (max-width: 1279px) {
+          width: 100%;
           &.mail {
             font-size: 16px;
           }
@@ -96,7 +109,7 @@
   border-radius: 30px;
   overflow: hidden;
   z-index: 1;
-  @media screen and (max-width: 1439px) {
+  @media screen and (max-width: 1279px) {
     width: calc(50% - 10px);
     min-height: 120px;
     border-radius: 20px;
@@ -105,7 +118,7 @@
     width: 100%;
     padding: 46px 52px;
     gap: 22px;
-    @media screen and (max-width: 1439px) {
+    @media screen and (max-width: 1279px) {
       padding: 24px;
     }
   }
@@ -128,7 +141,7 @@
     font-size: 25px;
     background: rgba(0, 0, 0, 0);
     border: 1px solid rgba(0, 0, 0, 0);
-    @media screen and (max-width: 1439px) {
+    @media screen and (max-width: 1279px) {
       font-size: 16px;
     }
     &:hover,
@@ -147,12 +160,12 @@
     font-size: 25px;
     line-height: 1.35;
     margin-top: 8px;
-    @media screen and (max-width: 1439px) {
+    @media screen and (max-width: 1279px) {
       font-size: 16px;
       margin-top: 4px;
     }
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1280px) {
     &:first-child {
       margin-bottom: 15px;
     }
@@ -166,12 +179,12 @@
   gap: 24px;
   justify-content: flex-end;
   align-items: center;
-  @media screen and (max-width: 1439px) {
+  @media screen and (max-width: 1279px) {
     justify-content: space-between;
   }
   .policy {
     max-width: 356px;
-    @media screen and (max-width: 1439px) {
+    @media screen and (max-width: 1279px) {
       max-width: 240px;
     }
   }
@@ -182,7 +195,7 @@
   font-size: 16px;
   line-height: 1.35;
   color: rgba(0, 0, 0, 0.6);
-  @media screen and (max-width: 1439px) {
+  @media screen and (max-width: 1279px) {
     font-size: 12px;
   }
 }
@@ -239,7 +252,7 @@
       }
     }
   }
-  @media screen and (max-width: 1439px) {
+  @media screen and (max-width: 1279px) {
     gap: 16px;
     li {
       width: 60px;

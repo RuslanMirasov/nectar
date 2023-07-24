@@ -32,7 +32,10 @@
   @media screen and (max-width: 1279px) {
     min-height: 50px;
   }
-
+  &.button--tab {
+    border: 1px solid var(--white);
+    background: var(--white);
+  }
   &.button--small {
     min-height: 48px;
     font-family: 'ubuntu_light';
@@ -53,7 +56,8 @@
     background: rgba(0, 0, 0, 0);
   }
   &:hover,
-  &:focus {
+  &:focus,
+  &.active {
     background: var(--button-color-hover);
     border-color: transparent;
     color: #ffffff !important;

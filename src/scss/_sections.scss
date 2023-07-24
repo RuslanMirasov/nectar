@@ -714,3 +714,35 @@
     }
   }
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////  SECTION SERVICES
+
+.section--services {
+  padding: 95px 0px 84px 0px;
+  background: var(--bg);
+  @media screen and (min-width: 745px) and (max-width: 1279px) {
+    padding: 40px 0px;
+  }
+  @media screen and (max-width: 744px) {
+    padding: 32px 0px;
+  }
+}
+
+.services-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-top: 55px;
+  @media screen and (max-width: 1279px) {
+    gap: 10px;
+    margin-top: 40px;
+  }
+}
+
+.services {
+  margin-top: 80px;
+  @media screen and (max-width: 1279px) {
+    margin-top: 40px;
+  }
+}

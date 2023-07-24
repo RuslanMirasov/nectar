@@ -1,16 +1,13 @@
 /*----------------------------------------------- TYPOGRAPHY */
 
 .titleBox {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-}
-
-.titleBox > * {
-  margin-top: 20px;
-}
-
-.titleBox > *:first-child {
-  margin-top: 0px;
+  gap: 20px;
+  .forBtn {
+    width: 100%;
+  }
 }
 
 .title {

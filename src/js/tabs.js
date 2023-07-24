@@ -28,6 +28,7 @@ function tabHide(tab) {
   tab.style.opacity = '0';
   tab.style.pointerEvents = 'none';
   tab.style.visibility = 'hidden';
+  tab.style.transform = 'translate(0px, 20px)';
 }
 
 function tabShow(tab) {
@@ -36,5 +37,6 @@ function tabShow(tab) {
     tab.style.opacity = '1';
     tab.style.pointerEvents = 'all';
     tab.style.visibility = 'visible';
+    tab.style.transform = 'translate(0px, 0px)';
   }, 10);
 }

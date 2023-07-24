@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', event => {
   const amimateElements = document.querySelectorAll('[data-animation]');
   const body = document.querySelector('.body');
   const header = document.querySelector('.header');
-  const SCREEN_GAP = 50;
+  const SCREEN_GAP = 0;
 
   window.addEventListener('scroll', throttle(animate, 150));
   window.addEventListener('resize', throttle(animate, 150));

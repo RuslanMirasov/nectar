@@ -24,10 +24,13 @@
       padding-bottom: 8px;
     }
     .logo {
-      width: 60px;
+      width: 80px;
       height: 54px;
       svg {
         fill: var(--black) !important;
+      }
+      @media screen and (max-width: 479px) {
+        width: 60px;
       }
     }
     .menu__list > li {

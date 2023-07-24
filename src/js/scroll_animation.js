@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', event => {
   const header = document.querySelector('.header');
   const SCREEN_GAP = 50;
 
-  window.addEventListener('scroll', throttle(animate, 250));
-  window.addEventListener('resize', throttle(animate, 250));
+  window.addEventListener('scroll', throttle(animate, 150));
+  window.addEventListener('resize', throttle(animate, 150));
   window.addEventListener('load', function () {
     setTimeout(animate, 500);
   });

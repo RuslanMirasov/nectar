@@ -403,11 +403,16 @@
   padding-bottom: 8px;
 }
 .header.fix .logo {
-  width: 60px;
+  width: 80px;
   height: 54px;
 }
 .header.fix .logo svg {
   fill: var(--black) !important;
+}
+@media screen and (max-width: 479px) {
+  .header.fix .logo {
+    width: 60px;
+  }
 }
 .header.fix .menu__list > li > a {
   color: var(--black) !important;
@@ -2424,7 +2429,6 @@
 .popup .policy {
   font-size: 12px;
   line-height: 1.35;
-  margin-top: 15px;
 }
 
 .slider-arrow {

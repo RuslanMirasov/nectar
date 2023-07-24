@@ -5,12 +5,12 @@ const agree = document.querySelectorAll('.agree');
 const addErrorText = true;
 const minSymbols = 3;
 const errorSymbols = 'Minimum characters!';
-const errorEmptyInput = 'The field must not be empty!';
-const errorNameInput = 'Only letters are allowed!';
-const errorEmailInput = 'Wrong E-mail format!';
-const errorPhoneInput = 'Wrong phone format!';
-const errorMinNumber = 'The minimum value is';
-const errorMaxNumber = 'The maximum value is';
+const errorEmptyInput = 'Заполните поле!';
+const errorNameInput = 'Имя не может содержать цифры!';
+const errorEmailInput = 'Не верный формат E-mail!';
+const errorPhoneInput = 'Не верный формат телефона!';
+const errorMinNumber = 'Максимальное значение';
+const errorMaxNumber = 'Минимальное значение';
 
 //MODAL CONSTS
 const openButton = document.querySelectorAll('[data-popup]');
@@ -19,17 +19,26 @@ const allPopups = document.querySelectorAll('.modal');
 const modalBackdrop = document.querySelector('.backdrop');
 const fixedElements = [].filter.call(document.all, e => getComputedStyle(e).position == 'fixed');
 const body = document.querySelector('.body');
+const popupBody = document.querySelectorAll('.popup__body');
 
 let bodyPadding = window.innerWidth - document.querySelector('.main').offsetWidth;
 let defaultPopupInfo = [
   'request',
-  'Send order form',
-  'Order Form',
-  'Fill in the form and we will get <br />back to you as soon as possible!',
-  'Send',
+  'Отправить заявку',
+  'Отправить заявку',
+  'Заполните форму и наш менеджер <br />свяжется с вами в ближайшее время!',
+  'Отправить',
 ];
 
 window.addEventListener('resize', scrollbarWidthModify);
+popupBody.forEach(bodyPopup => {
+  bodyPopup.addEventListener('click', e => {
+    if (e.target.classList.contains('popup__body')) {
+      popupClose();
+      modalClose();
+    }
+  });
+});
 
 function scrollbarWidthModify() {
   bodyPadding = window.innerWidth - document.querySelector('.main').offsetWidth;

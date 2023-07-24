@@ -2,7 +2,7 @@
   --color: #c7af81;
   --black: #2c2c2c;
   --grey: rgba(0, 0, 0, 0.6);
-  --placeholder: #c4c4c4;
+  --placeholder: #424242;
   --white: #ffffff;
   --button-color: #e8dfce;
   --button-color-hover: #c7af81;
@@ -1492,6 +1492,190 @@
   }
 }
 
+.section--form {
+  padding: 80px 0px;
+}
+.section--form .titleBox {
+  text-align: center;
+}
+@media screen and (max-width: 1279px) {
+  .section--form {
+    padding: 20px 0px;
+  }
+  .section--form .titleBox {
+    text-align: left;
+  }
+}
+
+.formBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 76px 60px;
+  margin-top: 50px;
+  background: var(--bg);
+  border-radius: 30px;
+  gap: 60px;
+}
+.formBox .form-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-content: space-between;
+  width: calc(60% - 30px);
+}
+.formBox .form-content .title {
+  max-width: 600px;
+  z-index: 2;
+}
+.formBox .form-content .form-content__price {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.formBox .form-inputs {
+  width: calc(40% - 30px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.formBox .form-inputs .form {
+  max-width: 426px;
+  margin: 0 auto;
+}
+.formBox .form-inputs .form .policy {
+  display: block;
+  font-size: 16px;
+  line-height: 1.35;
+  margin-top: 12px;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: "ubuntu_regular";
+}
+@media screen and (max-width: 1279px) {
+  .formBox {
+    gap: 24px;
+    padding: 40px 24px;
+    margin-top: 40px;
+  }
+  .formBox .form-content {
+    gap: 24px;
+    align-content: flex-start;
+    width: calc(50% - 12px);
+  }
+  .formBox .form-content .title--h4 {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .formBox .form-content .form-content__price {
+    justify-content: center;
+  }
+  .formBox .form-inputs {
+    width: calc(50% - 12px);
+  }
+  .formBox .form-inputs .form .policy {
+    font-size: 12px;
+    line-height: 1.2;
+    margin-top: 12px;
+    letter-spacing: -0.24px;
+  }
+}
+@media screen and (max-width: 743px) {
+  .formBox {
+    padding: 24px;
+  }
+  .formBox .form-content {
+    gap: 24px;
+    width: 100%;
+  }
+  .formBox .form-content .title--h4 {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .formBox .form-content .form-content__price {
+    justify-content: center;
+    align-items: center;
+  }
+  .formBox .form-inputs {
+    width: 100%;
+  }
+  .formBox .form-inputs .form {
+    max-width: 100%;
+  }
+}
+
+.form-content__price .formPrice {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: var(--white);
+  padding: 10px 40px;
+  border-radius: 15px;
+  font-family: "EB Garamond", serif;
+  gap: 20px;
+  z-index: 2;
+}
+.form-content__price .formPrice span {
+  display: inline-block;
+  position: relative;
+  font-size: 35px;
+  font-style: normal;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.form-content__price .formPrice span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  top: 50%;
+  left: 0px;
+}
+.form-content__price .formPrice p {
+  font-size: 50px;
+  font-style: normal;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.form-content__price .offer {
+  position: absolute;
+  bottom: -34px;
+  right: 0px;
+  z-index: 1;
+}
+@media screen and (max-width: 1279px) {
+  .form-content__price .formPrice {
+    padding: 10px 30px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  .form-content__price .formPrice span {
+    font-size: 16px;
+  }
+  .form-content__price .formPrice p {
+    font-size: 32px;
+  }
+  .form-content__price .offer {
+    bottom: auto;
+    right: auto;
+    position: relative;
+    max-width: 216px;
+  }
+}
+@media screen and (max-width: 743px) {
+  .form-content__price .offer {
+    max-width: 90%;
+    margin-top: 24px;
+  }
+}
+
 /*----------------------------------------------- BUTTONS*/
 .forBtn {
   display: flex;
@@ -1523,7 +1707,7 @@
   transition: 250ms var(--cubic);
   cursor: pointer;
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1279px) {
   .button {
     min-height: 50px;
   }
@@ -1853,18 +2037,25 @@
 /*-----------------------------FORMS*/
 .form {
   position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 15px;
+  width: 100%;
+}
+.form .button {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 15px;
 }
 
 .label {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  margin-top: 20px;
   text-align: left;
-}
-
-.label:first-child {
-  margin-top: 0px;
+  width: 100%;
 }
 
 .label__text,
@@ -1885,14 +2076,15 @@
 .input {
   display: inline-block;
   width: 100%;
-  height: 60px;
-  font-size: 16px;
-  line-height: 1.25;
-  padding: 0px 20px;
-  background: #ffffff;
-  border: 1px solid #000000;
-  color: #000000;
+  height: 66px;
+  font-size: 20px;
+  line-height: 1.35;
+  padding: 0px 34px;
+  background: var(--white);
+  border: 1px solid var(--white);
+  color: var(--black);
   outline: none;
+  border-radius: 50px;
   transition: border 250ms var(--cubic);
 }
 .input.input--icon {
@@ -1929,7 +2121,7 @@
   opacity: 1;
 }
 .input:focus {
-  border: 1px solid rgb(50, 156, 50);
+  border: 1px solid var(--button-color-hover);
 }
 .input:focus::-moz-placeholder {
   opacity: 0;
@@ -1941,18 +2133,18 @@
   opacity: 0;
 }
 .input:focus + .label__icon {
-  fill: rgb(50, 156, 50);
-}
-.input.valid {
-  border: 1px solid rgb(50, 156, 50);
-}
-.input.valid + .label__icon {
-  fill: rgb(50, 156, 50);
+  fill: var(--button-color-hover);
 }
 .input:-webkit-autofill {
   box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15) !important;
   -webkit-text-fill-color: #000000 !important;
   color: #000000 !important;
+}
+@media screen and (max-width: 1279px) {
+  .input {
+    height: 52px;
+    padding: 0px 24px;
+  }
 }
 
 .label__icon {
@@ -2067,6 +2259,12 @@
   color: var(--red);
   transition: 250ms var(--cubic);
   transform: scaleY(0);
+  padding-left: 34px;
+}
+@media screen and (max-width: 1279px) {
+  .label__error {
+    padding-left: 24px;
+  }
 }
 .label__error.active {
   height: 16px;
@@ -2134,7 +2332,7 @@
   text-align: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
   border-radius: 20px;
-  background: #fff;
+  background: var(--bg);
   padding: 40px 30px;
   opacity: 1;
   -webkit-user-select: none;
@@ -2143,10 +2341,6 @@
           user-select: none;
   transform: translate(0px, 0px);
   transition: opacity 250ms var(--cubic), transform 250ms var(--cubic);
-}
-.modal .popup .button {
-  margin-top: 32px;
-  min-width: 110px;
 }
 @media screen and (max-width: 419px) {
   .modal .popup {
@@ -2207,8 +2401,8 @@
 #loading .popup {
   background: rgba(0, 0, 0, 0);
   box-shadow: none;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 10px;
   padding: 10px;
   transform: translate(0px, 0px);
@@ -2220,13 +2414,17 @@
   height: 60%;
   left: 20%;
   top: 20%;
-  border-top: 3px solid #ffffff;
-  border-left: 3px solid #ffffff;
-  border-right: 3px solid #ffffff;
-  border-bottom: 3px solid rgba(0, 0, 0, 0);
+  border-top: 1px solid var(--bg);
+  border-left: 1px solid var(--bg);
   border-radius: 100px;
   -webkit-animation: 800ms linear 0s infinite rotate;
           animation: 800ms linear 0s infinite rotate;
+}
+
+.popup .policy {
+  font-size: 12px;
+  line-height: 1.35;
+  margin-top: 15px;
 }
 
 .slider-arrow {

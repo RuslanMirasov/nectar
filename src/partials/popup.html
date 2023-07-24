@@ -6,31 +6,23 @@
   <div class="popup__body">
     <div class="popup">
       <button class="popup__close" data-popup-close></button>
-      <b class="popup-title">Order Form</b>
+      <b class="popup-title">Отправить заявку</b>
       <p class="popup-subtitle">
-        Fill in the form and we will get <br />
-        back to you as soon as possible!
+        Заполните форму и наш менеджер <br />
+        свяжется с вами в ближайшее время!
       </p>
       <form action="#" method="POST" class="form" autocomplete="off" novalidate>
         <input type="hidden" name="subject" class="subject" value="Order Form" />
         <!-- name -->
         <label class="label">
-          <span class="label__text">Name</span>
-          <input type="text" class="input" name="name" placeholder="Ruslan Mirasov" required />
+          <input type="text" class="input" name="name" placeholder="Имя" required />
         </label>
         <!-- Phone -->
         <label class="label">
-          <span class="label__text">Phone number</span>
-          <input type="tel" id="phone-input" class="input input--tel" name="phone" placeholder="+38 (0--) --- -- --" required />
+          <input type="tel" id="phone-input" class="input input--tel" name="phone" placeholder="Телефон" required />
         </label>
-        <!-- Email -->
-        <label class="label">
-          <span class="label__text">Email</span>
-          <input type="email" class="input" name="email" placeholder="example@gmail.com" required />
-        </label>
-        <!-- submit -->
-        <button type="submit" class="button button--border medium button--submit">Send</button>
-        <button type="button" class="button" data-popup="ok">ok</button>
+        <p class="policy">Отправляя контактные данные, Вы соглашаетесь с политикой конфиденциальности сайта</p>
+        <button type="submit" class="button">Отправить</button>
       </form>
     </div>
   </div>
@@ -48,8 +40,9 @@
   <div class="popup__body">
     <div class="popup">
       <button class="popup__close" data-popup-close></button>
-      <b class="popup-title">Form was sended!</b>
-      <p class="popup-subtitle">thank you for your massege.</p>
+      <b class="popup-title">Ваша заявка <br />успешно отправлена</b>
+      <p class="popup-subtitle">Наш менеджер свяжется <br />с вами в ближайшее время</p>
+      <button class="button" data-popup-close>Закрыть</button>
     </div>
   </div>
 </div>

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet" />
     <title>SPA by M.NECTAR</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
@@ -127,14 +127,14 @@
           </div>
           <div class="wellnesses">
             <!--1-->
-            <div class="wellness wellness--one">
+            <div class="wellness wellness--one" data-animation="fade-bottom" data-delay="10">
               <div class="text">
                 <h3 class="title title--h5">Курорт</h3>
                 <p class="subtitle">Один из самых эстетичных и атмосферных Spa-центров в Эстонии</p>
               </div>
             </div>
             <!--2-->
-            <div class="wellness wellness--two">
+            <div class="wellness wellness--two" data-animation="fade-bottom" data-delay="100">
               <div class="text">
                 <h3 class="title title--h5">Натуральные и экологически чистые продукты</h3>
                 <p class="subtitle">Используем только экологически чистые, натуральные материалы с безопасным составом</p>
@@ -154,7 +154,7 @@
               </picture>
             </div>
             <!--2 dop-->
-            <div class="wellness wellness--dop">
+            <div class="wellness wellness--dop" data-animation="fade-bottom" data-delay="100">
               <picture class="picture">
                 <img
                   srcset="./img/wellness1_480.png 1x, ./img/wellness1_480@2x.png 2x"
@@ -166,7 +166,7 @@
               </picture>
             </div>
             <!--3-->
-            <div class="wellness wellness--three">
+            <div class="wellness wellness--three" data-animation="fade-bottom" data-delay="200">
               <div class="text">
                 <h3 class="title title--h5">Удобство</h3>
                 <p class="subtitle">Персональный подход к комфорту каждого гостя</p>
@@ -186,7 +186,7 @@
               </picture>
             </div>
             <!--3 dop-->
-            <div class="wellness wellness--dop2">
+            <div class="wellness wellness--dop2" data-animation="fade-bottom" data-delay="200">
               <picture class="picture">
                 <img
                   srcset="./img/wellness2_480.png 1x, ./img/wellness2_480@2x.png 2x"
@@ -198,14 +198,13 @@
               </picture>
             </div>
             <!--4-->
-            <div class="wellness wellness--four">
+            <div class="wellness wellness--four" data-animation="fade-bottom" data-delay="300">
               <div class="text">
                 <h3 class="title title--h5">Гранд-мастера</h3>
                 <p class="subtitle">Специалисты высшего класса из европейских стран</p>
               </div>
             </div>
-
-            <div class="wellness-line">
+            <div class="wellness-line" data-animation="scale" data-delay="400">
               <svg><use href="./img/icons.svg#wellness-line"></use></svg>
               <img
                 class="wellness-line1"
@@ -225,7 +224,52 @@
           </div>
         </div>
       </section>
-      <!--section Hero end-->
+      <!--section WELLNESS CLINIC end-->
+
+      <!--section FORM-->
+      <section class="section section--form">
+        <div class="container">
+          <div class="titleBox">
+            <h2 class="title title--h2" data-animation="fade-bottom" data-delay="10">Special offer</h2>
+          </div>
+          <div class="formBox" data-animation="fade-bottom" data-delay="10">
+            <div class="form-content">
+              <h3 class="title title--h4">Успокаивающий <br />и расслабляющий массаж спины</h3>
+              <div class="form-content__price">
+                <div class="formPrice">
+                  <span>135€</span>
+                  <p>99€</p>
+                </div>
+                <img
+                  class="offer"
+                  srcset="./img/offer.png 1x, ./img/offer@2x.png 2x"
+                  src="./img/offer.png"
+                  alt="spa salon nectar"
+                  width="262"
+                  height="239"
+                />
+              </div>
+            </div>
+            <div class="form-inputs">
+              <form action="#" method="POST" class="form" autocomplete="off" novalidate>
+                <input type="hidden" name="subject" class="subject" value="Специальное предложение" />
+                <!-- name -->
+                <label class="label">
+                  <input type="text" class="input" name="name" placeholder="Имя" required />
+                </label>
+                <!-- Phone -->
+                <label class="label">
+                  <input type="tel" id="phone-input" class="input input--tel" name="phone" placeholder="+7 (999) 999 99-99 " required />
+                </label>
+                <!-- submit -->
+                <button type="submit" class="button button--border">Отправить</button>
+                <p class="policy">Отправляя контактные данные, Вы соглашаетесь с политикой конфиденциальности сайта</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--section FORM-->
     </main>
     <load src="./partials/footer.html" />
     <load src="./partials/popup.html" />

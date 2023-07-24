@@ -1,18 +1,25 @@
 /*-----------------------------FORMS*/
 .form {
   position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 15px;
+  width: 100%;
+  .button {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 15px;
+  }
 }
 
 .label {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  margin-top: 20px;
   text-align: left;
-}
-
-.label:first-child {
-  margin-top: 0px;
+  width: 100%;
 }
 
 .label__text,
@@ -30,15 +37,17 @@
 .input {
   display: inline-block;
   width: 100%;
-  height: 60px;
-  font-size: 16px;
-  line-height: 1.25;
-  padding: 0px 20px;
-  background: #ffffff;
-  border: 1px solid #000000;
-  color: #000000;
+  height: 66px;
+  font-size: 20px;
+  line-height: 1.35;
+  padding: 0px 34px;
+  background: var(--white);
+  border: 1px solid var(--white);
+  color: var(--black);
   outline: none;
+  border-radius: 50px;
   transition: border 250ms var(--cubic);
+
   &.input--icon {
     padding-left: 40px;
   }
@@ -57,24 +66,22 @@
     opacity: 1;
   }
   &:focus {
-    border: 1px solid rgb(50, 156, 50);
+    border: 1px solid var(--button-color-hover);
     &::placeholder {
       opacity: 0;
     }
     + .label__icon {
-      fill: rgb(50, 156, 50);
-    }
-  }
-  &.valid {
-    border: 1px solid rgb(50, 156, 50);
-    + .label__icon {
-      fill: rgb(50, 156, 50);
+      fill: var(--button-color-hover);
     }
   }
   &:-webkit-autofill {
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15) !important;
     -webkit-text-fill-color: #000000 !important;
     color: #000000 !important;
+  }
+  @media screen and (max-width: 1279px) {
+    height: 52px;
+    padding: 0px 24px;
   }
 }
 
@@ -192,6 +199,10 @@
   color: var(--red);
   transition: 250ms var(--cubic);
   transform: scaleY(0);
+  padding-left: 34px;
+  @media screen and (max-width: 1279px) {
+    padding-left: 24px;
+  }
   &.active {
     height: 16px;
     transform: scaleY(1);

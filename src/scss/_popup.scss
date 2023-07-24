@@ -61,16 +61,12 @@
     text-align: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
     border-radius: 20px;
-    background: #fff;
+    background: var(--bg);
     padding: 40px 30px;
     opacity: 1;
     user-select: none;
     transform: translate(0px, 0px);
     transition: opacity 250ms var(--cubic), transform 250ms var(--cubic);
-    .button {
-      margin-top: 32px;
-      min-width: 110px;
-    }
     @media screen and (max-width: 419px) {
       padding: 32px 16px;
     }
@@ -134,8 +130,8 @@
   .popup {
     background: rgba(0, 0, 0, 0);
     box-shadow: none;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 10px;
     padding: 10px;
     transform: translate(0px, 0px);
@@ -146,12 +142,16 @@
       height: 60%;
       left: 20%;
       top: 20%;
-      border-top: 3px solid #ffffff;
-      border-left: 3px solid #ffffff;
-      border-right: 3px solid #ffffff;
-      border-bottom: 3px solid rgba(0, 0, 0, 0);
+      border-top: 1px solid var(--bg);
+      border-left: 1px solid var(--bg);
       border-radius: 100px;
       animation: 800ms linear 0s infinite rotate;
     }
   }
+}
+
+.popup .policy {
+  font-size: 12px;
+  line-height: 1.35;
+  margin-top: 15px;
 }

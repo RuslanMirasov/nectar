@@ -985,7 +985,7 @@
   @media screen and (min-width: 745px) and (max-width: 1279px) {
     padding: 80px 0px;
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 744px) {
     padding: 32px 0px;
   }
 }
@@ -1020,7 +1020,7 @@
     @media screen and (max-width: 1279px) {
       width: calc(50% - 10px);
     }
-    @media screen and (max-width: 476px) {
+    @media screen and (max-width: 549px) {
       width: 100%;
     }
     position: relative;
@@ -1112,6 +1112,94 @@
   @media screen and (max-width: 743px) {
     .button.button--white {
       display: inline-flex !important;
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////  SECTION PRODUCTS
+
+.section--products {
+  padding: 140px 0px;
+  background: var(--bg);
+  @media screen and (max-width: 1279px) {
+    padding: 32px 0px;
+  }
+}
+
+.products-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  .titleBox {
+    width: 850px;
+    max-width: 100%;
+    @media screen and (max-width: 1279px) {
+      width: 500px;
+      max-width: 95%;
+    }
+  }
+  @media screen and (max-width: 743px) {
+    .button {
+      display: none;
+    }
+  }
+}
+
+.products-foot {
+  display: none;
+  @media screen and (max-width: 743px) {
+    display: block;
+    margin-top: 24px;
+  }
+  @media screen and (max-width: 376px) {
+    .button {
+      width: 100%;
+    }
+  }
+}
+
+.products {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 80px;
+}
+
+.product {
+  width: calc(58% - 20px);
+  min-height: 514px;
+  position: relative;
+  background: var(--white);
+  padding: 50px;
+  border-radius: 50px;
+  z-index: 1;
+  overflow: hidden;
+  &:first-child,
+  &:nth-child(4n),
+  &:nth-child(5n) {
+    width: calc(42% - 20px);
+  }
+  img {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+  }
+  .titleBox {
+    position: relative;
+    z-index: 2;
+    max-width: 240px;
+    .subtitle {
+      width: 100%;
+    }
+    .button {
+      margin-top: 30px;
     }
   }
 }

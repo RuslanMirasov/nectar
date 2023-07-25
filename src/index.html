@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SPA by M.NECTAR</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/styles.min.css" />
   </head>
   <body class="body">
@@ -433,6 +432,8 @@
                     alt="spa salon nectar"
                     height="520"
                     width="670"
+                    data-animation="scale"
+                    data-delay="10"
                   />
                   <div class="forBtn">
                     <button class="button button--border">подробнее</button>
@@ -452,6 +453,8 @@
                     alt="spa salon nectar"
                     height="492"
                     width="634"
+                    data-animation="scale"
+                    data-delay="10"
                   />
                   <div class="forBtn">
                     <button class="button button--border">подробнее</button>
@@ -464,6 +467,81 @@
         </div>
       </section>
       <!--section EXCLUSIVE end-->
+
+      <!--section PRODUCTS-->
+      <section class="section section--products">
+        <div class="container">
+          <div class="products-head" data-animation="fade-bottom" data-delay="10">
+            <div class="titleBox">
+              <h2 class="title title--h2">Интернет-магазин</h2>
+              <p class="subtitle big">КОСМЕТИКА ДЛЯ ЛИЦА И ТЕЛА, НАТУРАЛЬНЫЕ АРОМАМАСЛА</p>
+            </div>
+            <a href="#!" class="button button--border">в магазин</a>
+          </div>
+          <div class="products">
+            <div class="product" data-animation="fade-bottom" data-delay="10">
+              <img
+                class="exclusive__image"
+                srcset="./img/product1.jpg 1x, ./img/product1@2x.jpg 2x"
+                src="./img/product1.jpg"
+                alt="spa salon nectar"
+                height="550"
+              />
+              <div class="titleBox">
+                <h3 class="title title--h5">эфирные масла</h3>
+                <p class="subtitle">Натуральные эфирные масла премиум класса</p>
+                <a href="#!" class="button button--border">перейти</a>
+              </div>
+            </div>
+            <div class="product" data-animation="fade-bottom" data-delay="10">
+              <img
+                class="exclusive__image"
+                srcset="./img/product2.jpg 1x, ./img/product2@2x.jpg 2x"
+                src="./img/product2.jpg"
+                alt="spa salon nectar"
+                height="550"
+              />
+              <div class="titleBox">
+                <h3 class="title title--h5">Твердые масла</h3>
+                <p class="subtitle">Натуральные эфирные масла премиум класса</p>
+                <a href="#!" class="button button--border">перейти</a>
+              </div>
+            </div>
+            <div class="product" data-animation="fade-bottom" data-delay="10">
+              <img
+                class="exclusive__image"
+                srcset="./img/product3.jpg 1x, ./img/product3@2x.jpg 2x"
+                src="./img/product3.jpg"
+                alt="spa salon nectar"
+                height="550"
+              />
+              <div class="titleBox">
+                <h3 class="title title--h5">гидролат</h3>
+                <p class="subtitle">Гидролат - от гидро + le lait - дистиллят, образующаяся при паровой дистилляции растительного сырья</p>
+                <a href="#!" class="button button--border">перейти</a>
+              </div>
+            </div>
+            <div class="product" data-animation="fade-bottom" data-delay="10">
+              <img
+                class="exclusive__image"
+                srcset="./img/product4.jpg 1x, ./img/product4@2x.jpg 2x"
+                src="./img/product4.jpg"
+                alt="spa salon nectar"
+                height="550"
+              />
+              <div class="titleBox">
+                <h3 class="title title--h5">базовые масла</h3>
+                <p class="subtitle">природные жиры, используются для создания композиций с эфирными маслами</p>
+                <a href="#!" class="button button--border">перейти</a>
+              </div>
+            </div>
+          </div>
+          <div class="products-foot" data-animation="fade-bottom" data-delay="10">
+            <a href="#!" class="button button--border">в магазин</a>
+          </div>
+        </div>
+      </section>
+      <!--section PRODUCTS end-->
     </main>
     <load src="./partials/footer.html" />
     <load src="./partials/popup.html" />

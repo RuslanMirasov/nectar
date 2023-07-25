@@ -11,7 +11,7 @@
 }
 
 .title {
-  font-family: 'title';
+  font-family: 'title', serif;
   text-transform: uppercase;
   font-weight: normal;
   &.title--h1 {
@@ -133,7 +133,7 @@
     font-size: 18px;
   }
   b {
-    font-family: 'ubuntu_regular';
+    font-family: 'ubuntu_regular', serif;
     font-weight: normal;
   }
   @media screen and (max-width: 1279px) {

@@ -291,7 +291,7 @@
   margin-left: auto;
   gap: 20px;
   order: 1;
-  font-family: 'ubuntu_medium';
+  font-family: 'ubuntu_medium', serif;
   a {
     font-size: 19px;
     line-height: 24px;
@@ -317,7 +317,7 @@
   height: 24px;
   cursor: pointer;
   p {
-    font-family: 'ubuntu_regular';
+    font-family: 'ubuntu_regular', serif;
     font-size: 19px;
     line-height: 24px;
     pointer-events: none;
@@ -344,7 +344,7 @@
       justify-content: center;
       align-items: center;
       padding: 6px 20px;
-      border-radius: 5px;
+      border-radius: 14px;
       background: var(--white);
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
       &:hover,

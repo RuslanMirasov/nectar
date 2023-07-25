@@ -92,3 +92,9 @@
     display: none !important;
   }
 }
+
+.del_in1440 {
+  @media screen and (min-width: 1280px) {
+    display: none !important;
+  }
+}

@@ -54,7 +54,7 @@
         min-height: auto;
       }
       .footer__link {
-        font-family: 'title';
+        font-family: 'title', serif;
         font-weight: normal;
         line-height: 1.1;
         width: auto;
@@ -179,13 +179,32 @@
   gap: 24px;
   justify-content: flex-end;
   align-items: center;
+  p {
+    font-size: 16px;
+    line-height: 1.35;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: normal;
+    font-family: 'ubuntu_regular';
+    a {
+      font-family: 'ubuntu_medium';
+      font-weight: normal;
+      color: inherit;
+    }
+  }
   @media screen and (max-width: 1279px) {
     justify-content: space-between;
+    p {
+      font-size: 12px;
+      font-family: 'ubuntu_light';
+      a {
+        font-family: 'ubuntu_regular';
+      }
+    }
   }
   .policy {
     max-width: 356px;
     @media screen and (max-width: 1279px) {
-      max-width: 240px;
+      max-width: 320px;
     }
   }
 }

@@ -143,6 +143,12 @@
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .del_in1440 {
+    display: none !important;
+  }
+}
+
 /*----------------------------------------------- TYPOGRAPHY */
 .titleBox {
   display: flex;
@@ -155,7 +161,7 @@
 }
 
 .title {
-  font-family: "title";
+  font-family: "title", serif;
   text-transform: uppercase;
   font-weight: normal;
 }
@@ -311,7 +317,7 @@
   font-size: 18px;
 }
 .subtitle b {
-  font-family: "ubuntu_regular";
+  font-family: "ubuntu_regular", serif;
   font-weight: normal;
 }
 @media screen and (max-width: 1279px) {
@@ -667,7 +673,7 @@
   margin-left: auto;
   gap: 20px;
   order: 1;
-  font-family: "ubuntu_medium";
+  font-family: "ubuntu_medium", serif;
 }
 .header__buttons a {
   font-size: 19px;
@@ -695,7 +701,7 @@
   cursor: pointer;
 }
 .language p {
-  font-family: "ubuntu_regular";
+  font-family: "ubuntu_regular", serif;
   font-size: 19px;
   line-height: 24px;
   pointer-events: none;
@@ -723,7 +729,7 @@
   justify-content: center;
   align-items: center;
   padding: 6px 20px;
-  border-radius: 5px;
+  border-radius: 14px;
   background: var(--white);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 }
@@ -833,10 +839,10 @@
     /*2 LEVEL*/
   }
   .menu__list > li:hover > a, .menu__list > li:focus > a {
-    color: var(--button-color-hover);
+    color: var(--button-color);
   }
   .menu__list > li:hover > .menuArrow svg, .menu__list > li:focus > .menuArrow svg {
-    fill: var(--button-color-hover);
+    fill: var(--button-color);
   }
   .menu__list > li:first-child {
     margin-left: 0px;
@@ -866,23 +872,24 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     position: absolute;
-    left: -20px;
+    left: -25px;
     top: 100%;
     transition: 320ms var(--cubic);
     background: var(--bg);
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+    padding: 12px 10px;
+    box-shadow: 4px 4px 4px 0px rgba(166, 166, 166, 0.15);
+    border-radius: 20px;
     transform: translate(0px, 20px);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    border-radius: 5px;
     z-index: 1;
   }
   .menu__list > li > ul li {
     width: 100%;
     position: relative;
     transition: 320ms var(--cubic);
-    border-radius: 5px;
+    border-radius: 10px;
     z-index: 1;
     /*3 LEVEL*/
   }
@@ -895,26 +902,27 @@
   .menu__list > li > ul li a {
     display: block;
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     padding-right: 40px;
     transition: 320ms var(--cubic);
     white-space: nowrap;
     background: rgba(0, 0, 0, 0);
-    border-radius: 5px;
+    border-radius: 10px;
+    font-family: "ubuntu_regular";
     z-index: 1;
   }
   .menu__list > li > ul li a:hover, .menu__list > li > ul li a:focus {
-    background: var(--button-color-hover);
-    color: var(--white);
+    background: var(--button-color);
+    color: var(--black);
   }
   .menu__list > li > ul li:hover {
-    background: var(--button-color-hover);
+    background: var(--button-color);
   }
   .menu__list > li > ul li:hover > a {
-    color: var(--white);
+    color: var(--black);
   }
   .menu__list > li > ul li:hover > .menuArrow svg {
-    fill: #ffffff !important;
+    fill: var(--black) !important;
   }
   .menu__list > li > ul li:hover > ul {
     transform: translate(0px, 0px);
@@ -924,17 +932,18 @@
   }
   .menu__list > li > ul li > ul {
     background: var(--bg);
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
     position: absolute;
-    left: 100%;
-    top: 0%;
+    left: calc(100% + 10px);
+    top: -14px;
     transition: 320ms var(--cubic);
     transform: translate(0px, 20px);
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    border-radius: 5px;
     z-index: 1;
+    padding: 12px 10px;
+    box-shadow: 4px 4px 4px 0px rgba(166, 166, 166, 0.15);
+    border-radius: 20px;
   }
   .menu__list > li .menuArrow {
     display: flex;
@@ -1229,7 +1238,7 @@
 }
 @media screen and (max-width: 1279px) {
   .section--wellness {
-    padding: 60px 0px;
+    padding: 64px 0px 32px 0px;
   }
   .section--wellness .titleBox .title--h5 {
     margin-top: 12px;
@@ -1505,7 +1514,7 @@
 }
 @media screen and (max-width: 1279px) {
   .section--form {
-    padding: 20px 0px;
+    padding: 20px 0px 32px 0px;
   }
   .section--form .titleBox {
     justify-content: flex-start;
@@ -1559,7 +1568,7 @@
   line-height: 1.35;
   margin-top: 12px;
   color: rgba(0, 0, 0, 0.7);
-  font-family: "ubuntu_regular";
+  font-family: "ubuntu_regular", serif;
 }
 @media screen and (max-width: 1279px) {
   .formBox {
@@ -1621,17 +1630,18 @@
   background: var(--white);
   padding: 10px 40px;
   border-radius: 15px;
-  font-family: "EB Garamond", serif;
+  font-family: "title", serif;
   gap: 20px;
   z-index: 2;
 }
 .form-content__price .formPrice span {
   display: inline-block;
   position: relative;
-  font-size: 35px;
+  font-size: 20px;
   font-style: normal;
   line-height: 1.2;
   text-transform: uppercase;
+  top: 4px;
 }
 .form-content__price .formPrice span:before {
   content: "";
@@ -1641,13 +1651,15 @@
   background: currentColor;
   top: 50%;
   left: 0px;
+  transform: translate(0px, -3px);
 }
 .form-content__price .formPrice p {
   position: relative;
-  font-size: 50px;
+  font-size: 30px;
   font-style: normal;
   line-height: 1.2;
   text-transform: uppercase;
+  top: 4px;
 }
 .form-content__price .offer {
   position: absolute;
@@ -1666,7 +1678,7 @@
     font-size: 16px;
   }
   .form-content__price .formPrice p {
-    font-size: 32px;
+    font-size: 28px;
   }
   .form-content__price .offer {
     bottom: auto;
@@ -1827,7 +1839,12 @@
 .setvices-images .services-images__item .info p {
   display: inline-block;
   margin-bottom: 8px;
-  font-family: "ubuntu_regular";
+  font-family: "ubuntu_regular", serif;
+}
+@media screen and (max-width: 480px) {
+  .setvices-images .services-images__item .info p {
+    margin-bottom: 2px;
+  }
 }
 .setvices-images .services-images__item:hover img, .setvices-images .services-images__item:focus img {
   transform: scale(1.05);
@@ -1893,6 +1910,210 @@
   }
 }
 
+.section--exclusive {
+  padding: 80px 0px 140px 0px;
+}
+.section--exclusive .container > .titleBox {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.section--exclusive .container > .titleBox .title--h2 {
+  display: inline;
+  max-width: 72%;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1279px) {
+  .section--exclusive .container > .titleBox .title--h2 {
+    max-width: 480px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .section--exclusive .container > .titleBox .title--h2 {
+    max-width: 400px;
+  }
+}
+.section--exclusive .container > .titleBox .title--h2 svg {
+  display: inline;
+  width: 28px;
+  height: 48px;
+}
+@media screen and (max-width: 1279px) {
+  .section--exclusive .container > .titleBox .title--h2 svg {
+    width: 14px;
+    height: 24px;
+  }
+}
+@media screen and (max-width: 744px) {
+  .section--exclusive .container > .titleBox .title--h2 {
+    font-size: 24px;
+  }
+  .section--exclusive .container > .titleBox .title--h2 svg {
+    width: 12px;
+    height: 20px;
+  }
+}
+@media screen and (max-width: 743px) {
+  .section--exclusive .container > .titleBox .button {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 745px) and (max-width: 1279px) {
+  .section--exclusive {
+    padding: 80px 0px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section--exclusive {
+    padding: 32px 0px;
+  }
+}
+
+.exclusive-line {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  left: 0px;
+  right: 0px;
+  bottom: 5%;
+  top: 5%;
+}
+
+.exclusive-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 180px;
+  width: 100%;
+  margin-top: 45px;
+}
+@media screen and (max-width: 1279px) {
+  .exclusive-services {
+    gap: 20px;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 446px) {
+  .exclusive-services .forBtn {
+    gap: 8px;
+  }
+}
+.exclusive-services .exclusive-services__item {
+  position: relative;
+}
+@media screen and (max-width: 1279px) {
+  .exclusive-services .exclusive-services__item {
+    width: calc(50% - 10px);
+  }
+}
+@media screen and (max-width: 476px) {
+  .exclusive-services .exclusive-services__item {
+    width: 100%;
+  }
+}
+.exclusive-services .exclusive-services__item .exclusive {
+  width: 46%;
+  margin-left: 54%;
+  margin-right: auto;
+}
+@media screen and (max-width: 1279px) {
+  .exclusive-services .exclusive-services__item .exclusive {
+    width: 100%;
+    margin-left: 0%;
+  }
+  .exclusive-services .exclusive-services__item .exclusive .subtitle {
+    width: 100%;
+  }
+}
+.exclusive-services .exclusive-services__item .exclusive img {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  left: 0px;
+  top: 0px;
+}
+@media screen and (max-width: 1279px) {
+  .exclusive-services .exclusive-services__item .exclusive img {
+    position: relative;
+    width: 60%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .exclusive-services .exclusive-services__item .exclusive img {
+    width: 100%;
+  }
+}
+.exclusive-services .exclusive-services__item:nth-child(2n) .exclusive {
+  margin-left: 0px;
+  margin-right: 54%;
+}
+@media screen and (max-width: 1279px) {
+  .exclusive-services .exclusive-services__item:nth-child(2n) .exclusive {
+    margin-right: 0%;
+  }
+}
+.exclusive-services .exclusive-services__item:nth-child(2n) .exclusive img {
+  width: 47.314%;
+  left: auto;
+  top: auto;
+  right: 0px;
+  bottom: 0px;
+}
+@media screen and (max-width: 1279px) {
+  .exclusive-services .exclusive-services__item:nth-child(2n) .exclusive img {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .exclusive-services .exclusive-services__item:nth-child(2n) .exclusive img {
+    width: 100%;
+  }
+}
+
+.exclusive {
+  display: flex;
+  background: var(--bg);
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 60px;
+  border-radius: 50px;
+}
+.exclusive .titleBox {
+  max-width: 96%;
+  gap: 14px;
+}
+.exclusive .titleBox .forBtn {
+  margin-top: 40px;
+}
+.exclusive .titleBox .title {
+  width: 100%;
+}
+@media screen and (max-width: 1279px) {
+  .exclusive .titleBox {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    max-width: 100%;
+    height: 100%;
+  }
+  .exclusive .titleBox .forBtn {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .exclusive {
+    align-content: space-between;
+    padding: 24px;
+    border-radius: 20px;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 743px) {
+  .exclusive .button.button--white {
+    display: inline-flex !important;
+  }
+}
+
 /*----------------------------------------------- BUTTONS*/
 .forBtn {
   display: flex;
@@ -1914,7 +2135,7 @@
   align-items: center;
   font-size: 20px;
   min-height: 64px;
-  font-family: "ubuntu_regular";
+  font-family: "ubuntu_regular", serif;
   line-height: 1.2;
   padding: 10px 45px;
   border-radius: 40px;
@@ -1930,12 +2151,28 @@
   }
 }
 .button.button--tab {
+  border: 1px solid #fffbf4;
+  background: #fffbf4;
+  color: #000000;
+}
+.button.button--tab:hover, .button.button--tab:focus, .button.button--tab.active {
+  background: var(--button-color);
+  border-color: transparent;
+  color: #000000 !important;
+}
+.button.button--white {
   border: 1px solid var(--white);
   background: var(--white);
+  color: var(--black);
+}
+.button.button--white:hover, .button.button--white:focus, .button.button--white.active {
+  background: var(--button-color);
+  border-color: transparent;
+  color: var(--black) !important;
 }
 .button.button--small {
   min-height: 48px;
-  font-family: "ubuntu_light";
+  font-family: "ubuntu_light", serif;
   font-size: 18px;
   padding: 10px 30px;
 }
@@ -1951,6 +2188,11 @@
 .button.button--border {
   border: 1px solid var(--black);
   background: rgba(0, 0, 0, 0);
+}
+.button.button--border:hover, .button.button--border:focus, .button.button--border.active {
+  background: var(--button-color);
+  border-color: transparent;
+  color: var(--black) !important;
 }
 .button:hover, .button:focus, .button.active {
   background: var(--button-color-hover);
@@ -2029,7 +2271,7 @@
   }
 }
 .footer_content.footer_content--left .full .footer__link {
-  font-family: "title";
+  font-family: "title", serif;
   font-weight: normal;
   line-height: 1.1;
   width: auto;
@@ -2161,9 +2403,28 @@
   justify-content: flex-end;
   align-items: center;
 }
+.copy p {
+  font-size: 16px;
+  line-height: 1.35;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: normal;
+  font-family: "ubuntu_regular";
+}
+.copy p a {
+  font-family: "ubuntu_medium";
+  font-weight: normal;
+  color: inherit;
+}
 @media screen and (max-width: 1279px) {
   .copy {
     justify-content: space-between;
+  }
+  .copy p {
+    font-size: 12px;
+    font-family: "ubuntu_light";
+  }
+  .copy p a {
+    font-family: "ubuntu_regular";
   }
 }
 .copy .policy {
@@ -2171,7 +2432,7 @@
 }
 @media screen and (max-width: 1279px) {
   .copy .policy {
-    max-width: 240px;
+    max-width: 320px;
   }
 }
 

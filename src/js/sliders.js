@@ -1,51 +1,26 @@
-'use strict';
-const responsiveSliders = document.querySelectorAll('.responsiveSlider');
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
 
-responsiveSliders_init();
+import 'swiper/css';
+import 'swiper/css/navigation';
 
-/* All sliders init*/
-function responsiveSliders_init() {
-   if (responsiveSliders.length > 0) {
-      responsiveSliders.forEach(slider => {
-         let autoplay_run = false;
-         if (slider.dataset.autoplay > 0) {
-            autoplay_run = true;
-         }
-         var sliderClass = slider.children[0].className.split(' ');
-         var newSlider = new Swiper('.' + sliderClass[1], {
-            slidesPerView: slider.dataset.colmob,
-            spaceBetween: Number(slider.dataset.marginmobil),
-            speed: 800,
-            loop: slider.dataset.loop,
-            autoHeight: true,
-            allowTouchMove: slider.dataset.move,
-            effect: slider.dataset.effect,
-            autoplay: {
-               enabled: autoplay_run,
-               delay: slider.dataset.autoplay,
-               disableOnInteraction: false,
-            },
-            navigation: {
-               nextEl: '.' + sliderClass[1] + '_next',
-               prevEl: '.' + sliderClass[1] + '_prev',
-            },
-            pagination: {
-               el: '.' + sliderClass[1] + '_pagination',
-               clickable: true,
-            },
-            breakpoints: {
-               //desctop settings
-               1280: {
-                  slidesPerView: slider.dataset.col,
-                  spaceBetween: Number(slider.dataset.margin),
-               },
-               //tablet settings
-               768: {
-                  slidesPerView: slider.dataset.coltab,
-                  spaceBetween: Number(slider.dataset.margin),
-               },
-            },
-         });
-      });
-   }
-}
+const brendSwiper = new Swiper('.swiperBrend', {
+  modules: [Navigation],
+  slidesPerView: 1,
+  spaceBetween: 30,
+  autoHeight: true,
+  navigation: {
+    nextEl: '.arr--next',
+    prevEl: '.arr--prev',
+  },
+  breakpoints: {
+    520: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    800: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+});

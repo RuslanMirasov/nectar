@@ -7,7 +7,6 @@
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SPA by M.NECTAR</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/styles.min.css" />
   </head>
   <body class="body">
@@ -559,6 +558,71 @@
         </div>
       </section>
       <!--section PRESENT end-->
+
+      <!--section BRENDS-->
+      <section class="section section--brends">
+        <div class="container">
+          <div class="brends-head">
+            <h2 class="title title--h3">Премиальная органическая косметика, аромамасла</h2>
+            <p class="subtitle big">
+              Мы тщательно подбирали косметику мировых брендов для лица и тела. Искали эксклюзивные бренды и на 100% уверены в качестве.
+            </p>
+            <a href="#!" class="button button--border">смотреть все бренды</a>
+          </div>
+
+          <!--SLIDER ARROWS-->
+          <div class="slider-arrows">
+            <svg width="32" height="32" class="arr--prev"><use href="./img/icons.svg#prev"></use></svg>
+            <svg width="32" height="32" class="arr--next"><use href="./img/icons.svg#next"></use></svg>
+          </div>
+          <!--SLIDER-->
+          <div class="brendsSlider">
+            <div class="swiper-container swiperBrend">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="brend-image">
+                    <img srcset="./img/brend1.png" src="./img/brend1.png" alt="spa salon nectar" height="72" />
+                  </div>
+                  <div class="brend-text">
+                    <h3 class="title title--h7">Alpeor Switzerland</h3>
+                    <p class="subtitle small">
+                      Раскрывает секреты природы для вашей кожи. Понимание внутренней работы жизни, использование силы растений и имитация их
+                      невероятных свойств для придания вашей коже.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="brend-image">
+                    <img srcset="./img/brend2.png" src="./img/brend2.png" alt="spa salon nectar" height="72" />
+                  </div>
+                  <div class="brend-text">
+                    <h3 class="title title--h7">М. НЕКТАР</h3>
+                    <p class="subtitle small">
+                      Английский семейный бизнес со славянской душой и европейским подходом к качеству в сфере продажи профессиональной продукции для
+                      ароматерапии, спа и массажной техники.
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="brend-image">
+                    <img srcset="./img/brend3.png" src="./img/brend3.png" alt="spa salon nectar" height="72" />
+                  </div>
+                  <div class="brend-text">
+                    <h3 class="title title--h7">CND</h3>
+                    <p class="subtitle small">
+                      Одна из самых легендарных корпораций в мире. Это символ качества, синоним качества и гарантия безупречного и безопасного
+                      маникюра.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#!" class="button button--border">смотреть все бренды</a>
+        </div>
+      </section>
+      <!--section BRENDS end-->
     </main>
     <load src="./partials/footer.html" />
     <load src="./partials/popup.html" />
@@ -568,7 +632,6 @@
     <input type="hidden" name="poddomen" class="poddomen" value="" />
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script type="module" src="./js/scripts.js"></script>
   </body>
 </html>

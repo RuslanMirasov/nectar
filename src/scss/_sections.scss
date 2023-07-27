@@ -1467,3 +1467,130 @@
     }
   }
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////  SECTION BRENDS
+
+.section--brends {
+  padding: 95px 0px 70px 0px;
+  @media screen and (max-width: 1279px) {
+    padding: 60px 0px 32px 0px;
+  }
+  .container {
+    > .button {
+      display: none;
+      margin-top: 32px;
+      @media screen and (max-width: 1279px) {
+        display: inline-flex;
+      }
+      @media screen and (max-width: 419px) {
+        width: 100%;
+      }
+    }
+  }
+  .brendsSlider {
+    margin-top: 60px;
+    @media screen and (max-width: 1279px) {
+      margin-top: 32px;
+    }
+  }
+}
+
+.brends-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  gap: 30px;
+  .subtitle {
+    max-width: 690px;
+  }
+  .button {
+    margin-top: 20px;
+  }
+  @media screen and (max-width: 1279px) {
+    gap: 10px;
+    .subtitle {
+      max-width: 690px;
+    }
+    .button {
+      display: none;
+    }
+  }
+}
+
+.swiperBrend {
+  overflow: hidden;
+  // .swiper-wrapper {
+  //   align-items: unset;
+  //   @media screen and (max-width: 550px) {
+  //     align-items: flex-start;
+  //   }
+  //   .swiper-slide {
+  //     height: 100%;
+  //     @media screen and (max-width: 550px) {
+  //       height: auto;
+  //     }
+  //   }
+  // }
+}
+
+.brend-image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background: var(--bg);
+  height: 168px;
+  img {
+    height: 100%;
+    max-height: 72px;
+  }
+  @media screen and (max-width: 1279px) {
+    border-radius: 20px;
+    margin-bottom: 14px;
+    height: 120px;
+    img {
+      max-height: 50px;
+    }
+  }
+}
+
+.brend-text {
+  padding: 40px;
+  border-radius: 30px;
+  background: var(--bg);
+  min-height: 288px;
+  //height: calc(100% - 168px - 30px);
+  .title {
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 1279px) {
+    padding: 24px;
+    border-radius: 20px;
+    min-height: 188px;
+    // height: calc(100% - 120px - 14px);
+  }
+  @media screen and (max-width: 550px) {
+    height: auto;
+  }
+}
+
+.slider-arrows {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  position: relative;
+  top: 20px;
+  svg {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+}

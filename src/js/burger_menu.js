@@ -11,11 +11,11 @@ const menuBackdrop = document.querySelector('.menu-backdrop');
 const navigation = document.querySelector('.menu__list');
 const navigationItems = navigation.querySelectorAll('li');
 const assetsPath = document.querySelector('.js-assets').value;
-const arrowMarkup = `<div class="menuArrow"><svg class="menuList__arrow"><use href="${assetsPath}img/icons.svg#arr_down"></use></svg></div>`;
+const menuArrowMarkup = `<div class="menuArrow"><svg class="menuList__arrow"><use href="${assetsPath}img/icons.svg#arr_down"></use></svg></div>`;
 
 navigationItems.forEach(navItem => {
   if (navItem.querySelector('ul')) {
-    navItem.insertAdjacentHTML('beforeend', arrowMarkup);
+    navItem.insertAdjacentHTML('beforeend', menuArrowMarkup);
     navItem.querySelector('a').style.pointerEvents = 'none';
   }
 });

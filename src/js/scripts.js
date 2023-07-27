@@ -6,4 +6,5 @@ import '../js/main_autopadding';
 import '../js/scroll_to_block';
 import '../js/burger_menu';
 import '../js/tabs';
+import '../js/mask';
 import '../js/sendmail';

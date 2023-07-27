@@ -15,6 +15,7 @@
   "author": "Ruslan Mirasov <info@mirasov.dev>",
   "license": "ISC",
   "dependencies": {
+    "inputmask": "^5.0.8",
     "lodash.throttle": "^4.1.1",
     "swiper": "^10.0.4",
     "vite-plugin-full-reload": "^1.0.5",

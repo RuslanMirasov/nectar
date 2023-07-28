@@ -29,11 +29,16 @@
   transform: translate(0px, 0px) scale(0.8);
   transform-origin: center center;
 }
+[data-animation='scaleX'] {
+  transform: translate(0px, 0px) scaleX(0);
+  transform-origin: left center;
+}
 [data-animation='fade-in'],
 [data-animation='fade-left'],
 [data-animation='fade-right'],
 [data-animation='fade-top'],
 [data-animation='fade-bottom'],
+[data-animation='scaleX'],
 [data-animation='scale'] {
   opacity: 0;
   transition: opacity 0.8s var(--cubic), transform 0.8s var(--cubic);

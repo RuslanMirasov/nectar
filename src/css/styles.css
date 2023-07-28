@@ -3529,24 +3529,24 @@ svg {
   fill: var(--red) !important;
 }
 .input::-moz-placeholder {
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 20px;
+  line-height: 1.35;
   color: var(--placeholder);
   -moz-transition: opacity 250ms var(--cubic);
   transition: opacity 250ms var(--cubic);
   opacity: 1;
 }
 .input:-ms-input-placeholder {
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 20px;
+  line-height: 1.35;
   color: var(--placeholder);
   -ms-transition: opacity 250ms var(--cubic);
   transition: opacity 250ms var(--cubic);
   opacity: 1;
 }
 .input::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 20px;
+  line-height: 1.35;
   color: var(--placeholder);
   transition: opacity 250ms var(--cubic);
   opacity: 1;
@@ -3708,7 +3708,7 @@ svg {
   pointer-events: none;
   visibility: hidden;
   transition: 1000ms var(--cubic);
-  transform: translate 0px, 20px;
+  transform: translate(0px, 20px);
 }
 .tabs .tab:first-child {
   position: relative;
@@ -3716,7 +3716,7 @@ svg {
   opacity: 1;
   pointer-events: all;
   visibility: visible;
-  transform: translate 0px, 0px;
+  transform: translate(0px, 0px);
 }
 
 /*-------------------- MODAL POPUP*/
@@ -3918,11 +3918,17 @@ svg {
   transform-origin: center center;
 }
 
+[data-animation=scaleX] {
+  transform: translate(0px, 0px) scaleX(0);
+  transform-origin: left center;
+}
+
 [data-animation=fade-in],
 [data-animation=fade-left],
 [data-animation=fade-right],
 [data-animation=fade-top],
 [data-animation=fade-bottom],
+[data-animation=scaleX],
 [data-animation=scale] {
   opacity: 0;
   transition: opacity 0.8s var(--cubic), transform 0.8s var(--cubic);
@@ -3932,6 +3938,7 @@ svg {
 [data-animation=fade-right].animate,
 [data-animation=fade-top].animate,
 [data-animation=fade-bottom].animate,
+[data-animation=scaleX].animate,
 [data-animation=scale].animate {
   transform: translate(0px, 0px) scale(1);
   opacity: 1;

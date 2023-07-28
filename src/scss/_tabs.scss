@@ -5,14 +5,14 @@
     pointer-events: none;
     visibility: hidden;
     transition: 1000ms var(--cubic);
-    transform: translate (0px, 20px);
+    transform: translate(0px, 20px);
     &:first-child {
       position: relative;
       display: block;
       opacity: 1;
       pointer-events: all;
       visibility: visible;
-      transform: translate (0px, 0px);
+      transform: translate(0px, 0px);
     }
   }
 }

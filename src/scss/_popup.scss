@@ -154,3 +154,50 @@
   font-size: 12px;
   line-height: 1.35;
 }
+
+#gallery {
+  .popup {
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+    border-radius: 0px;
+    background: none;
+    @media screen and (max-width: 1439px) {
+      max-width: 1024px;
+    }
+    .popup__close {
+      z-index: 3;
+    }
+    .swiperGallery {
+      overflow: hidden;
+      z-index: 2;
+    }
+    .slider-arrows {
+      justify-content: space-between;
+      width: 100%;
+      height: auto;
+      gap: 10px;
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      margin: 0px;
+      z-index: 3;
+      padding: 0px 32px;
+      transform: translate(0px, -30px);
+      @media screen and (max-width: 500px) {
+        padding: 0px 10px;
+        transform: translate(0px, -15px);
+      }
+
+      svg {
+        bottom: 0;
+        top: 0;
+        @media screen and (max-width: 500px) {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

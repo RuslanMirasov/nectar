@@ -10,8 +10,8 @@ const brendSwiper = new Swiper('.swiperBrend', {
   spaceBetween: 30,
   autoHeight: true,
   navigation: {
-    nextEl: '.arr--next',
-    prevEl: '.arr--prev',
+    nextEl: '.swiperBrend--next',
+    prevEl: '.swiperBrend--prev',
   },
   breakpoints: {
     520: {
@@ -22,5 +22,16 @@ const brendSwiper = new Swiper('.swiperBrend', {
       slidesPerView: 3,
       spaceBetween: 20,
     },
+  },
+});
+
+const gallerySwiper = new Swiper('.swiperGallery', {
+  modules: [Navigation],
+  slidesPerView: 1,
+  spaceBetween: 0,
+  autoHeight: true,
+  navigation: {
+    nextEl: '.swiperGallery--next',
+    prevEl: '.swiperGallery--prev',
   },
 });

@@ -2860,6 +2860,7 @@ svg {
 }
 @media screen and (max-width: 1279px) {
   .slider-arrows {
+    justify-content: flex-start;
     margin: 16px 0px;
     height: auto;
   }
@@ -2878,8 +2879,8 @@ svg {
 }
 @media screen and (max-width: 1279px) {
   .slider-arrows svg {
-    width: 32px;
-    height: 32px;
+    width: 50px;
+    height: 50px;
     bottom: 0px;
   }
 }
@@ -3901,6 +3902,56 @@ svg {
 .popup .policy {
   font-size: 12px;
   line-height: 1.35;
+}
+
+#gallery .popup {
+  max-width: 1200px;
+  overflow: hidden;
+  position: relative;
+  padding: 0px;
+  border-radius: 0px;
+  background: none;
+}
+@media screen and (max-width: 1439px) {
+  #gallery .popup {
+    max-width: 1024px;
+  }
+}
+#gallery .popup .popup__close {
+  z-index: 3;
+}
+#gallery .popup .swiperGallery {
+  overflow: hidden;
+  z-index: 2;
+}
+#gallery .popup .slider-arrows {
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  gap: 10px;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  margin: 0px;
+  z-index: 3;
+  padding: 0px 32px;
+  transform: translate(0px, -30px);
+}
+@media screen and (max-width: 500px) {
+  #gallery .popup .slider-arrows {
+    padding: 0px 10px;
+    transform: translate(0px, -15px);
+  }
+}
+#gallery .popup .slider-arrows svg {
+  bottom: 0;
+  top: 0;
+}
+@media screen and (max-width: 500px) {
+  #gallery .popup .slider-arrows svg {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 /*rotate [animation: 4s linear 0s infinite alternate rotate] */

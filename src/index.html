@@ -29,9 +29,16 @@
                 loading="lazy"
               />
             </picture> -->
-            <video width="1280" height="720" class="video-bg" autoplay loop muted>
-              <source src="./video/video.mp4" type="video/mp4" />
-            </video>
+            <video
+              width="1280"
+              height="720"
+              class="video-bg"
+              autoplay
+              loop
+              muted
+              data-desctop="./video/video.mp4"
+              data-mobil="./video/video_mobil.mp4"
+            ></video>
           </div>
           <div class="hero-content">
             <h1 class="title title--h1" data-animation="fade-top" data-delay="0">
@@ -43,7 +50,7 @@
               Подарите своему телу полное погружение в атмосферу расслабления
             </p>
             <div class="forBtn" data-animation="fade-top" data-delay="400">
-              <button class="button" data-popup="request">записаться</button>
+              <a href="https://wa.me/37256469796" target="_blank" class="button">записаться</a>
             </div>
           </div>
         </div>
@@ -107,11 +114,38 @@
               Забота о теле и здоровье, современные методики ароматерапии»
             </p>
             <div class="forBtn">
-              <button class="button button--border">подробнее</button>
+              <button class="button button--border" data-popup="gallery">подробнее</button>
             </div>
           </div>
         </div>
       </section>
+      <!-- GALLERY -->
+      <div class="modal is-hidden" id="gallery">
+        <div class="popup__body">
+          <div class="popup">
+            <!--SLIDER-->
+            <div class="popupGallery">
+              <!--SLIDER ARROWS-->
+              <div class="slider-arrows">
+                <svg width="60" height="60" class="arr--prev swiperGallery--prev"><use href="./img/icons.svg#prev"></use></svg>
+                <svg width="60" height="60" class="arr--next swiperGallery--next"><use href="./img/icons.svg#next"></use></svg>
+              </div>
+              <div class="swiper-container swiperGallery">
+                <div class="swiper-wrapper">
+                  <img src="./img/gallery/1.jpg" alt="spa salon nectar" class="swiper-slide" />
+                  <img src="./img/gallery/2.jpg" alt="spa salon nectar" class="swiper-slide" />
+                  <img src="./img/gallery/3.jpg" alt="spa salon nectar" class="swiper-slide" />
+                  <img src="./img/gallery/4.jpg" alt="spa salon nectar" class="swiper-slide" />
+                  <img src="./img/gallery/5.jpg" alt="spa salon nectar" class="swiper-slide" />
+                  <img src="./img/gallery/6.jpg" alt="spa salon nectar" class="swiper-slide" />
+                  <img src="./img/gallery/7.jpg" alt="spa salon nectar" class="swiper-slide" />
+                  <img src="./img/gallery/8.jpg" alt="spa salon nectar" class="swiper-slide" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!--section About end-->
 
       <!--section WELLNESS CLINIC-->
@@ -230,7 +264,7 @@
       <section class="section section--form">
         <div class="container">
           <div class="titleBox">
-            <h2 class="title title--h2">Special offer</h2>
+            <h2 class="title title--h2">СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ</h2>
           </div>
           <div class="formBox" data-animation="fade-bottom" data-delay="10">
             <div class="form-content">
@@ -418,7 +452,7 @@
             <h2 class="title title--h2">
               Эксклюзивные услуги <svg width="28" height="48"><use href="./img/icons.svg#by"></use></svg>M.Nectar
             </h2>
-            <button class="button del_in1440" data-popup="request">записаться</button>
+            <a href="https://wa.me/37256469796" target="_blank" class="button del_in1440">записаться</a>
           </div>
           <div class="exclusive-services">
             <div class="exclusive-services__item">
@@ -462,7 +496,7 @@
                   />
                   <div class="forBtn">
                     <button class="button button--border">подробнее</button>
-                    <button class="button button--white del_in1024" data-popup="request">записаться</button>
+                    <a href="https://wa.me/37256469796" target="_blank" class="button button--white del_in1024">записаться</a>
                   </div>
                 </div>
               </div>
@@ -480,7 +514,7 @@
               <h2 class="title title--h2">Интернет-магазин</h2>
               <p class="subtitle big">КОСМЕТИКА ДЛЯ ЛИЦА И ТЕЛА, НАТУРАЛЬНЫЕ АРОМАМАСЛА</p>
             </div>
-            <a href="#!" class="button button--border">в магазин</a>
+            <a href="https://alpeor.com/" target="_blank" class="button button--border">в магазин</a>
           </div>
           <div class="products">
             <div class="product" data-animation="fade-bottom" data-delay="10">
@@ -488,7 +522,7 @@
               <div class="titleBox">
                 <h3 class="title title--h5">эфирные масла</h3>
                 <p class="subtitle">Натуральные эфирные масла премиум класса</p>
-                <a href="#!" class="button button--border">перейти</a>
+                <a href="https://alpeor.com/" target="_blank" class="button button--border">перейти</a>
               </div>
             </div>
             <div class="product" data-animation="fade-bottom" data-delay="10">
@@ -496,7 +530,7 @@
               <div class="titleBox">
                 <h3 class="title title--h5">Твердые масла</h3>
                 <p class="subtitle">Натуральные эфирные масла премиум класса</p>
-                <a href="#!" class="button button--border">перейти</a>
+                <a href="https://alpeor.com/" target="_blank" class="button button--border">перейти</a>
               </div>
             </div>
             <div class="product" data-animation="fade-bottom" data-delay="10">
@@ -504,7 +538,7 @@
               <div class="titleBox">
                 <h3 class="title title--h5">гидролат</h3>
                 <p class="subtitle">Гидролат - от гидро + le lait - дистиллят, образующаяся при паровой дистилляции растительного сырья</p>
-                <a href="#!" class="button button--border">перейти</a>
+                <a href="https://alpeor.com/" target="_blank" class="button button--border">перейти</a>
               </div>
             </div>
             <div class="product" data-animation="fade-bottom" data-delay="10">
@@ -512,12 +546,12 @@
               <div class="titleBox">
                 <h3 class="title title--h5">базовые масла</h3>
                 <p class="subtitle">природные жиры, используются для создания композиций с эфирными маслами</p>
-                <a href="#!" class="button button--border">перейти</a>
+                <a href="https://alpeor.com/" target="_blank" class="button button--border">перейти</a>
               </div>
             </div>
           </div>
           <div class="products-foot" data-animation="fade-bottom" data-delay="10">
-            <a href="#!" class="button button--border">в магазин</a>
+            <a href="https://alpeor.com/" target="_blank" class="button button--border">в магазин</a>
           </div>
         </div>
       </section>
@@ -533,7 +567,7 @@
             <div class="school__image" data-animation="scale" data-delay="10">
               <img srcset="./img/school.jpg 1x, ./img/school@2x.jpg 2x" src="./img/school.jpg" alt="spa salon nectar" width="816" />
             </div>
-            <a href="#!" class="button button--border">посмотреть программу</a>
+            <a href="https://aromamoda.com/" target="_blank" class="button button--border">посмотреть программу</a>
           </div>
         </div>
       </section>
@@ -548,7 +582,7 @@
               <div class="titleBox">
                 <h2 class="title title--h3">ПОДАРОЧНЫЕ СЕРТИФИКАТЫ</h2>
                 <p class="subtitle medium">Лучшее решение для подарка</p>
-                <a href="#!" class="button button--border">перейти</a>
+                <a href="https://aromamoda.com/" target="_blank" class="button button--border">перейти</a>
               </div>
             </div>
             <div class="present__item">
@@ -564,7 +598,7 @@
               <div class="titleBox">
                 <h2 class="title title--h3">АБОНЕМЕНТЫ</h2>
                 <p class="subtitle medium">Коллекции посещений spa процедур <br />на выгодных условиях</p>
-                <a href="#!" class="button button--border">перейти</a>
+                <a href="https://aromamoda.com/" target="_blank" class="button button--border">перейти</a>
               </div>
             </div>
           </div>
@@ -583,8 +617,8 @@
           </div>
           <!--SLIDER ARROWS-->
           <div class="slider-arrows">
-            <svg width="60" height="60" class="arr--prev"><use href="./img/icons.svg#prev"></use></svg>
-            <svg width="60" height="60" class="arr--next"><use href="./img/icons.svg#next"></use></svg>
+            <svg width="60" height="60" class="arr--prev swiperBrend--prev"><use href="./img/icons.svg#prev"></use></svg>
+            <svg width="60" height="60" class="arr--next swiperBrend--next"><use href="./img/icons.svg#next"></use></svg>
           </div>
           <!--SLIDER-->
           <div class="brendsSlider">
@@ -629,7 +663,6 @@
               </div>
             </div>
           </div>
-          <a href="#!" class="button button--border">смотреть все бренды</a>
         </div>
       </section>
       <!--section BRENDS end-->
@@ -650,7 +683,7 @@
                   </p>
                 </div>
 
-                <a href="#!" class="button button--border">подписаться</a>
+                <a href="https://instagram.com/mnectar_spa?igshid=MzRlODBiNWFlZA==" target="_blank" class="button button--border">подписаться</a>
               </div>
               <ul class="insta-images">
                 <li><img src="./img/insta1.jpg" alt="spa salon nectar" width="166" height="144" /></li>
@@ -663,7 +696,7 @@
               <img src="./img/instagram.png" alt="spa salon nectar" width="340" height="570" data-animation="fade-top" data-delay="10" />
             </div>
           </div>
-          <a href="#!" class="button button--border">подписаться</a>
+          <a href="https://instagram.com/mnectar_spa?igshid=MzRlODBiNWFlZA==" target="_blank" class="button button--border">подписаться</a>
         </div>
       </section>
       <!--section INSTAGRAM end-->

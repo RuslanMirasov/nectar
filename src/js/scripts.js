@@ -1,4 +1,5 @@
 import '../js/preloader';
+import '../js/videobg';
 import '../js/sliders';
 import '../js/language';
 import '../js/scroll_animation';

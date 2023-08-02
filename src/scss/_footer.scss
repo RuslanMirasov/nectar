@@ -209,6 +209,16 @@
   }
 }
 
+.policy {
+  a {
+    border-bottom: 1px solid currentColor;
+    transition: 250ms var(--cubic);
+    &:hover,
+    &:focus {
+      color: var(--button-color-hover);
+    }
+  }
+}
 .policy,
 .copy .link {
   font-size: 16px;

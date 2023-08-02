@@ -1227,7 +1227,7 @@ svg {
   position: absolute;
   left: 0px;
   top: 0px;
-  background: var(--black);
+  background: #2e1a00;
   border-radius: 0px 0px 60px 60px;
   overflow: hidden;
   z-index: 1;
@@ -1237,9 +1237,30 @@ svg {
     border-radius: 0px 0px 30px 30px;
   }
 }
+.section--hero .hero-bg:before {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgb(23, 12, 0);
+  background: linear-gradient(180deg, rgba(23, 12, 0, 0.5382528011) 0%, rgba(255, 255, 255, 0) 48%, rgba(46, 26, 0, 0.9892331933) 100%);
+  opacity: 1;
+}
 .section--hero .hero-bg .picture,
 .section--hero .hero-bg img {
   display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section--hero .hero-bg .video-bg {
+  position: absolute;
+  left: 0px;
+  top: 0px;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1362,6 +1383,9 @@ svg {
   .section--about .titleBox {
     padding-left: 50%;
   }
+}
+.section--about .titleBox .title {
+  width: 100%;
 }
 .section--about .titleBox .subtitle {
   max-width: 420px;
@@ -2747,26 +2771,8 @@ svg {
   }
 }
 .section--brends .container > .button {
-  display: none;
   margin-top: 32px;
-}
-@media screen and (max-width: 1279px) {
-  .section--brends .container > .button {
-    display: inline-flex;
-  }
-}
-@media screen and (max-width: 419px) {
-  .section--brends .container > .button {
-    width: 100%;
-  }
-}
-.section--brends .brendsSlider {
-  margin-top: 60px;
-}
-@media screen and (max-width: 1279px) {
-  .section--brends .brendsSlider {
-    margin-top: 32px;
-  }
+  width: 100%;
 }
 
 .brends-head {
@@ -2780,18 +2786,12 @@ svg {
 .brends-head .subtitle {
   max-width: 690px;
 }
-.brends-head .button {
-  margin-top: 20px;
-}
 @media screen and (max-width: 1279px) {
   .brends-head {
     gap: 10px;
   }
   .brends-head .subtitle {
     max-width: 690px;
-  }
-  .brends-head .button {
-    display: none;
   }
 }
 
@@ -2853,14 +2853,35 @@ svg {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
+  height: 1px;
   gap: 10px;
   position: relative;
-  top: 20px;
+  margin: 60px 0px 0px 0px;
+}
+@media screen and (max-width: 1279px) {
+  .slider-arrows {
+    margin: 16px 0px;
+    height: auto;
+  }
 }
 .slider-arrows svg {
-  width: 32px;
-  height: 32px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
+  position: relative;
+  bottom: 60px;
+  transition: 250ms var(--cubic);
+  fill: var(--bg);
+}
+.slider-arrows svg:hover, .slider-arrows svg:focus {
+  fill: var(--button-color);
+}
+@media screen and (max-width: 1279px) {
+  .slider-arrows svg {
+    width: 32px;
+    height: 32px;
+    bottom: 0px;
+  }
 }
 
 .section--instagram {
@@ -3383,6 +3404,14 @@ svg {
   .copy .policy {
     max-width: 320px;
   }
+}
+
+.policy a {
+  border-bottom: 1px solid currentColor;
+  transition: 250ms var(--cubic);
+}
+.policy a:hover, .policy a:focus {
+  color: var(--button-color-hover);
 }
 
 .policy,

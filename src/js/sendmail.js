@@ -1,17 +1,3 @@
-//SENDMAIL CONSTS
-const forms = document.querySelectorAll('.form');
-const inputs = document.querySelectorAll('input, textarea');
-const agree = document.querySelectorAll('.agree');
-const addErrorText = true;
-const minSymbols = 3;
-const errorSymbols = 'Minimum characters!';
-const errorEmptyInput = 'Заполните поле!';
-const errorNameInput = 'Имя не может содержать цифры!';
-const errorEmailInput = 'Не верный формат E-mail!';
-const errorPhoneInput = 'Не верный формат телефона!';
-const errorMinNumber = 'Максимальное значение';
-const errorMaxNumber = 'Минимальное значение';
-
 //MODAL CONSTS
 const openButton = document.querySelectorAll('[data-popup]');
 const closeButton = document.querySelectorAll('[data-popup-close]');
@@ -20,8 +6,23 @@ const modalBackdrop = document.querySelector('.backdrop');
 const fixedElements = [].filter.call(document.all, e => getComputedStyle(e).position == 'fixed');
 const body = document.querySelector('.body');
 const popupBody = document.querySelectorAll('.popup__body');
-
 let bodyPadding = window.innerWidth - document.querySelector('.main').offsetWidth;
+
+//SENDMAIL CONSTS
+const forms = document.querySelectorAll('.form');
+const inputs = document.querySelectorAll('input, textarea');
+const agree = document.querySelectorAll('.agree');
+const addErrorText = true;
+const minSymbols = 3;
+const pageUrlText = window.location.href;
+
+let errorSymbols = 'Минимум символа!';
+let errorEmptyInput = 'Заполните поле!';
+let errorNameInput = 'Имя не может содержать цифры!';
+let errorEmailInput = 'Не верный формат E-mail!';
+let errorPhoneInput = 'Не верный формат телефона!';
+let errorMinNumber = 'Максимальное значение';
+let errorMaxNumber = 'Минимальное значение';
 let defaultPopupInfo = [
   'request',
   'Отправить заявку',
@@ -29,6 +30,27 @@ let defaultPopupInfo = [
   'Заполните форму и наш менеджер <br />свяжется с вами в ближайшее время!',
   'Отправить',
 ];
+
+if (pageUrlText.includes('en/')) {
+  errorSymbols = 'Minimum characters!';
+  errorEmptyInput = 'The field must not be empty!';
+  errorNameInput = 'Name cannot contain digits!';
+  errorEmailInput = 'Wrong E-mail format!';
+  errorPhoneInput = 'Wrong phone format!';
+  errorMinNumber = 'Maximum value';
+  errorMaxNumber = 'Minimum value';
+  defaultPopupInfo = ['request', 'Send request', 'Send request', 'Fill out the form and our <br />manager will contact you shortly!', 'Send'];
+}
+if (pageUrlText.includes('et/')) {
+  errorSymbols = 'Vähemalt tähemärki!';
+  errorEmptyInput = 'Täitke väli!';
+  errorNameInput = 'Nimi ei tohi sisaldada numbreid!';
+  errorEmailInput = 'Ebakorrektne E-mail vorming!';
+  errorPhoneInput = 'Vale telefoni formaat!';
+  errorMinNumber = 'Maksimaalne väärtus';
+  errorMaxNumber = 'Minimaalne väärtus';
+  defaultPopupInfo = ['request', 'Saada taotlus', 'Saada taotlus', 'Täitke vorm ja meie juht <br />võtab teiega peagi ühendust!', 'Saada'];
+}
 
 window.addEventListener('resize', scrollbarWidthModify);
 popupBody.forEach(bodyPopup => {

@@ -17,7 +17,7 @@
       <section class="section section--hero">
         <div class="container">
           <div class="hero-bg">
-            <picture class="picture">
+            <!-- <picture class="picture">
               <source media="(min-width:1025px)" srcset="./img/hero-desktop.jpg 1x, ./img/hero-desktop@2x.jpg 2x" />
               <source media="(min-width:481px)" srcset="./img/hero-tablet.jpg 1x, ./img/hero-tablet@2x.jpg 2x" />
               <img
@@ -28,7 +28,10 @@
                 height="568"
                 loading="lazy"
               />
-            </picture>
+            </picture> -->
+            <video width="1280" height="720" class="video-bg" autoplay loop muted>
+              <source src="./video/video.mp4" type="video/mp4" />
+            </video>
           </div>
           <div class="hero-content">
             <h1 class="title title--h1" data-animation="fade-top" data-delay="0">
@@ -260,7 +263,7 @@
                 </label>
                 <!-- submit -->
                 <button type="submit" class="button button--border">Отправить</button>
-                <p class="policy">Отправляя контактные данные, Вы соглашаетесь с политикой конфиденциальности сайта</p>
+                <p class="policy">Отправляя контактные данные, Вы соглашаетесь с <a href="./policy/">политикой конфиденциальности</a> сайта</p>
               </form>
             </div>
           </div>
@@ -549,7 +552,15 @@
               </div>
             </div>
             <div class="present__item">
-              <img srcset="./img/present2.jpg 1x, ./img/present2@2x.jpg 2x" src="./img/present2.jpg" alt="spa salon nectar" width="720" />
+              <img
+                srcset="./img/present2.jpg 1x, ./img/present2@2x.jpg 2x"
+                src="./img/present2.jpg"
+                alt="spa salon nectar"
+                width="720"
+                data-animation="fade-right"
+                data-delay="200"
+                data-repeat="true"
+              />
               <div class="titleBox">
                 <h2 class="title title--h3">АБОНЕМЕНТЫ</h2>
                 <p class="subtitle medium">Коллекции посещений spa процедур <br />на выгодных условиях</p>
@@ -569,12 +580,11 @@
             <p class="subtitle big">
               Мы тщательно подбирали косметику мировых брендов для лица и тела. Искали эксклюзивные бренды и на 100% уверены в качестве.
             </p>
-            <a href="#!" class="button button--border">смотреть все бренды</a>
           </div>
           <!--SLIDER ARROWS-->
           <div class="slider-arrows">
-            <svg width="32" height="32" class="arr--prev"><use href="./img/icons.svg#prev"></use></svg>
-            <svg width="32" height="32" class="arr--next"><use href="./img/icons.svg#next"></use></svg>
+            <svg width="60" height="60" class="arr--prev"><use href="./img/icons.svg#prev"></use></svg>
+            <svg width="60" height="60" class="arr--next"><use href="./img/icons.svg#next"></use></svg>
           </div>
           <!--SLIDER-->
           <div class="brendsSlider">

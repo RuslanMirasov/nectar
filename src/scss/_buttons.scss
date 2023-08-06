@@ -56,6 +56,22 @@
       color: var(--black) !important;
     }
   }
+  &.button--social {
+    border: 1px solid var(--white);
+    background: var(--white);
+    color: var(--black);
+    min-height: 50px;
+    svg {
+      margin-left: 15px;
+    }
+    &:hover,
+    &:focus,
+    &.active {
+      background: var(--button-color);
+      border-color: transparent;
+      color: var(--black) !important;
+    }
+  }
   &.button--small {
     min-height: 48px;
     font-family: 'ubuntu_light', serif;

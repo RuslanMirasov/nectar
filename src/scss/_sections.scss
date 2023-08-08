@@ -2749,4 +2749,81 @@
   @media screen and (max-width: 1279px) {
     padding: 32px 0px;
   }
+  .beforafterSwiper {
+    overflow: hidden;
+  }
+  .slider-arrows {
+    margin: 0;
+    @media screen and (max-width: 1279px) {
+      margin: 16px 0px;
+    }
+  }
+}
+
+.beforafter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  @media screen and (max-width: 1279px) {
+    gap: 20px;
+  }
+  .image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    width: calc(50% - 20px);
+    border-radius: 50px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    @media screen and (max-width: 1279px) {
+      width: calc(50% - 10px);
+      border-radius: 20px;
+    }
+    span {
+      display: inline-flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 30px;
+      width: 116px;
+      height: 58px;
+      border-radius: 58px;
+      font-family: 'ubuntu_regular';
+      background: var(--white);
+      font-size: 16px;
+      text-transform: lowercase;
+      font-weight: 400;
+      @media screen and (max-width: 1279px) {
+        width: 92px;
+        height: 42px;
+        bottom: 16px;
+      }
+    }
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-top: 121.315%;
+    }
+    img {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      transition: 500ms var(--cubic);
+      transform: scale(1);
+    }
+    &:hover,
+    &:focus {
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
 }

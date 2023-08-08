@@ -1014,7 +1014,7 @@ svg {
   padding: 6px 20px;
   border-radius: 14px;
   background: var(--white);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 }
 .language ul li:hover, .language ul li:focus {
   background: var(--button-color);
@@ -4226,6 +4226,11 @@ svg {
     gap: 20px;
   }
 }
+@media screen and (max-width: 479px) {
+  .beforafter {
+    gap: 10px;
+  }
+}
 .beforafter .image {
   display: flex;
   flex-wrap: wrap;
@@ -4241,6 +4246,11 @@ svg {
   .beforafter .image {
     width: calc(50% - 10px);
     border-radius: 20px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .beforafter .image {
+    width: 100%;
   }
 }
 .beforafter .image span {
@@ -4272,6 +4282,11 @@ svg {
   width: 100%;
   padding-top: 121.315%;
 }
+@media screen and (max-width: 479px) {
+  .beforafter .image:before {
+    padding-top: 100%;
+  }
+}
 .beforafter .image img {
   position: absolute;
   left: 0px;
@@ -4283,6 +4298,318 @@ svg {
 }
 .beforafter .image:hover img, .beforafter .image:focus img {
   transform: scale(1.05);
+}
+
+.section--certificate {
+  padding: 60px 0px 60px 0px;
+}
+.section--certificate .title--30 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 50px;
+  padding: 50px 20px 44px 20px;
+  line-height: 1.2;
+  background: var(--bg);
+}
+@media screen and (max-width: 1279px) {
+  .section--certificate {
+    padding: 32px 0px 32px 0px;
+  }
+  .section--certificate .title--30 {
+    font-size: 28px;
+    border-radius: 20px;
+    padding: 32px 50% 32px 20px;
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .section--certificate .title--30 {
+    padding: 16px 10px 16px 10px;
+  }
+}
+
+.certificate {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 60px;
+  position: relative;
+  margin-top: 60px;
+}
+@media screen and (max-width: 1279px) {
+  .certificate {
+    margin-top: 30px;
+    gap: 35px 20px;
+  }
+}
+.certificate .certificate__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 25px;
+  width: calc(50% - 30px);
+}
+@media screen and (max-width: 1279px) {
+  .certificate .certificate__item {
+    width: calc(50% - 10px);
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .certificate .certificate__item {
+    width: 100%;
+  }
+}
+.certificate .certificate__item .image {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: flex-start;
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  z-index: 1;
+}
+@media screen and (max-width: 1279px) {
+  .certificate .certificate__item .image {
+    border-radius: 20px;
+  }
+}
+.certificate .certificate__item .image:before {
+  content: "";
+  width: 100%;
+  display: block;
+  padding-top: 81.25%;
+}
+@media screen and (max-width: 1279px) {
+  .certificate .certificate__item .image:before {
+    padding-top: 60%;
+  }
+}
+.certificate .certificate__item .image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  transition: 500ms var(--cubic);
+  transform: scale(1);
+  -o-object-fit: 100% auto;
+     object-fit: 100% auto;
+}
+.certificate .certificate__item .image:hover img, .certificate .certificate__item .image:focus img {
+  transform: scale(1.05);
+}
+.certificate .certificate__item p {
+  font-family: "ubuntu_regular";
+  font-size: 30px;
+  line-height: 1.35;
+  display: block;
+  width: 100%;
+}
+@media screen and (max-width: 1279px) {
+  .certificate .certificate__item p {
+    font-size: 16px;
+  }
+}
+.certificate .certificate__item .button {
+  margin-top: 10px;
+}
+@media screen and (max-width: 1279px) {
+  .certificate .certificate__item .button {
+    margin-top: auto;
+  }
+}
+
+.whyCertificat {
+  position: relative;
+  width: 100%;
+}
+@media screen and (max-width: 1279px) {
+  .whyCertificat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+.whyCertificat .title--h4 {
+  margin-top: 100px;
+  line-height: 1.35;
+  order: 2;
+}
+@media screen and (max-width: 1279px) {
+  .whyCertificat .title--h4 {
+    font-size: 28px;
+    max-width: 610px;
+    order: 1;
+    margin: 0 auto;
+    margin-top: 140px;
+  }
+  .whyCertificat .title--h4 br {
+    display: none;
+  }
+}
+@media screen and (max-width: 743px) {
+  .whyCertificat .title--h4 {
+    max-width: 300px;
+    margin-top: 180px;
+  }
+}
+.whyCertificat .image {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  z-index: 1;
+  padding: 80px;
+  margin-top: 50px;
+  order: 3;
+}
+@media screen and (max-width: 1279px) {
+  .whyCertificat .image {
+    padding: 30px;
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .whyCertificat .image {
+    padding: 20px;
+    justify-content: center;
+  }
+}
+.whyCertificat .image:before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 30%;
+}
+@media screen and (max-width: 1023px) {
+  .whyCertificat .image:before {
+    padding-top: 50%;
+  }
+}
+.whyCertificat .image img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transition: 500ms var(--cubic);
+  transform: scale(1);
+}
+.whyCertificat .image:hover img {
+  transform: scale(1.05);
+}
+.whyCertificat .image svg {
+  position: absolute;
+  fill: var(--white);
+  transform: translate(0%, -6%);
+}
+@media screen and (max-width: 1023px) {
+  .whyCertificat .image svg {
+    width: auto;
+    height: 60%;
+    transform: translate(0%, 0%);
+  }
+}
+
+.run-line {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 1550px;
+  gap: 40px;
+  position: relative;
+  left: 50%;
+  margin: 25px 0px;
+  order: 1;
+  transform: translate(-50%, 0%);
+}
+@media screen and (max-width: 1279px) {
+  .run-line {
+    width: 100%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    gap: 0px;
+    order: 2;
+  }
+}
+.run-line .run-line__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 0px;
+  position: relative;
+}
+@media screen and (max-width: 1279px) {
+  .run-line .run-line__item img {
+    width: 20%;
+  }
+  .run-line .run-line__item img.circleImg--2 {
+    position: absolute;
+    bottom: 120%;
+    left: 0px;
+  }
+  .run-line .run-line__item img.circleImg--4 {
+    position: absolute;
+    bottom: 120%;
+    right: 0px;
+  }
+  .run-line .run-line__item img.circleImg--1 {
+    width: 25%;
+    height: auto;
+    margin-left: 6%;
+  }
+  .run-line .run-line__item img.circleImg--5 {
+    width: 25%;
+    height: auto;
+    margin-right: 6%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .run-line .run-line__item img.circleImg--2, .run-line .run-line__item img.circleImg--4 {
+    bottom: auto;
+    top: -250px;
+    width: 18%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 743px) {
+  .run-line .run-line__item img.circleImg--2, .run-line .run-line__item img.circleImg--4 {
+    width: 120px;
+  }
+  .run-line .run-line__item img.circleImg--2 {
+    top: -390px;
+    left: auto;
+    right: 58%;
+  }
+  .run-line .run-line__item img.circleImg--4 {
+    right: auto;
+    left: 58%;
+    top: -420px;
+  }
+  .run-line .run-line__item img.circleImg--1 {
+    width: 30%;
+    margin-left: 0%;
+  }
+  .run-line .run-line__item img.circleImg--3 {
+    width: 30%;
+  }
+  .run-line .run-line__item img.circleImg--5 {
+    width: 30%;
+    margin-right: 0%;
+  }
 }
 
 /*----------------------------------------------- BUTTONS*/

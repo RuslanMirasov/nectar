@@ -2953,6 +2953,86 @@
 .whyCertificat {
   position: relative;
   width: 100%;
+  .text {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+    .titleBox {
+      display: inline-flex;
+      .ubuntu {
+        display: inline-block;
+        min-height: 80px;
+        font-family: 'ubuntu_regular';
+        font-size: 35px;
+        font-weight: normal;
+        line-height: 1;
+        width: 100%;
+      }
+      &:nth-child(1) {
+        max-width: 248px;
+      }
+      &:nth-child(2) {
+        max-width: 165px;
+      }
+      &:nth-child(3) {
+        max-width: 285px;
+      }
+      &:nth-child(4) {
+        max-width: 250px;
+      }
+    }
+    @media screen and (max-width: 1279px) {
+      order: 3;
+      .titleBox {
+        width: 22%;
+        gap: 10px;
+        .ubuntu {
+          min-height: auto;
+          font-size: 20px;
+          br {
+            display: none;
+          }
+        }
+        &:nth-child(1) {
+          max-width: 100%;
+        }
+        &:nth-child(2) {
+          max-width: 100%;
+        }
+        &:nth-child(3) {
+          max-width: 100%;
+        }
+        &:nth-child(4) {
+          max-width: 100%;
+        }
+        .subtitle {
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1023px) {
+      flex-wrap: wrap;
+      gap: 20px;
+      .titleBox {
+        width: 46%;
+      }
+    }
+    @media screen and (max-width: 479px) {
+      margin-top: 10px;
+      .titleBox {
+        width: 100%;
+        padding-right: 70px;
+        &:nth-child(2n) {
+          padding-left: 70px;
+          padding-right: 0px;
+        }
+      }
+    }
+  }
   @media screen and (max-width: 1279px) {
     display: flex;
     flex-wrap: wrap;
@@ -2994,6 +3074,7 @@
     @media screen and (max-width: 1279px) {
       padding: 30px;
       border-radius: 20px;
+      order: 4;
     }
     @media screen and (max-width: 1023px) {
       padding: 20px;
@@ -3125,6 +3206,60 @@
           margin-right: 0%;
         }
       }
+    }
+  }
+}
+
+.whyCertificat-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 50px;
+  background: var(--bg);
+  padding: 60px 40px;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  order: 5;
+  .titleBox {
+    width: 33.333333%;
+    padding: 0px 20px;
+    .title {
+      min-height: 74px;
+    }
+  }
+  .button {
+    margin-top: 40px;
+  }
+  @media screen and (max-width: 1279px) {
+    border-radius: 20px;
+    padding: 32px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    .titleBox {
+      width: 31%;
+      padding: 0px;
+      .title {
+        min-height: 45px;
+      }
+    }
+    .button {
+      margin-top: 24px;
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    .titleBox {
+      width: 100%;
+      gap: 10px;
+      .title {
+        min-height: 1px;
+      }
+    }
+    .button {
+      margin-top: 10px;
     }
   }
 }

@@ -8,12 +8,17 @@ const burger = document.querySelector('.burger');
 scrollLinks.forEach(link => {
   link.addEventListener('click', function (event) {
     event.preventDefault();
-    let distance = document.querySelector('.' + this.dataset.scrollto).offsetTop - header.getBoundingClientRect().height;
-    window.scrollTo({ top: distance, left: 0, behavior: 'smooth' });
-    if (body.classList.contains('lock')) {
-      menu.classList.toggle('is-open');
-      burger.classList.toggle('is-open');
-      body.classList.toggle('lock');
+    if (document.querySelector(`.${this.dataset.scrollto}`)) {
+      let distance = document.querySelector('.' + this.dataset.scrollto).offsetTop - header.getBoundingClientRect().height;
+      window.scrollTo({ top: distance, left: 0, behavior: 'smooth' });
+      if (body.classList.contains('lock')) {
+        menu.classList.toggle('is-open');
+        burger.classList.toggle('is-open');
+        body.classList.toggle('lock');
+      }
+    } else {
+      const homePage = `${window.location.protocol}//${window.location.host}/#${this.dataset.scrollto}`;
+      document.location = homePage;
     }
   });
 });

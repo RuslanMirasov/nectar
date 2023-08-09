@@ -572,6 +572,19 @@ svg {
     font-size: 25px;
   }
 }
+.title.title--24 {
+  line-height: 1.4;
+}
+@media screen and (max-width: 1279px) {
+  .title.title--24 {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .title.title--24 {
+    font-size: 23px;
+  }
+}
 .title.title--h7 {
   line-height: 1.35;
 }
@@ -4429,6 +4442,90 @@ svg {
   position: relative;
   width: 100%;
 }
+.whyCertificat .text {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+.whyCertificat .text .titleBox {
+  display: inline-flex;
+}
+.whyCertificat .text .titleBox .ubuntu {
+  display: inline-block;
+  min-height: 80px;
+  font-family: "ubuntu_regular";
+  font-size: 35px;
+  font-weight: normal;
+  line-height: 1;
+  width: 100%;
+}
+.whyCertificat .text .titleBox:nth-child(1) {
+  max-width: 248px;
+}
+.whyCertificat .text .titleBox:nth-child(2) {
+  max-width: 165px;
+}
+.whyCertificat .text .titleBox:nth-child(3) {
+  max-width: 285px;
+}
+.whyCertificat .text .titleBox:nth-child(4) {
+  max-width: 250px;
+}
+@media screen and (max-width: 1279px) {
+  .whyCertificat .text {
+    order: 3;
+  }
+  .whyCertificat .text .titleBox {
+    width: 22%;
+    gap: 10px;
+  }
+  .whyCertificat .text .titleBox .ubuntu {
+    min-height: auto;
+    font-size: 20px;
+  }
+  .whyCertificat .text .titleBox .ubuntu br {
+    display: none;
+  }
+  .whyCertificat .text .titleBox:nth-child(1) {
+    max-width: 100%;
+  }
+  .whyCertificat .text .titleBox:nth-child(2) {
+    max-width: 100%;
+  }
+  .whyCertificat .text .titleBox:nth-child(3) {
+    max-width: 100%;
+  }
+  .whyCertificat .text .titleBox:nth-child(4) {
+    max-width: 100%;
+  }
+  .whyCertificat .text .titleBox .subtitle br {
+    display: none;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .whyCertificat .text {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .whyCertificat .text .titleBox {
+    width: 46%;
+  }
+}
+@media screen and (max-width: 479px) {
+  .whyCertificat .text {
+    margin-top: 10px;
+  }
+  .whyCertificat .text .titleBox {
+    width: 100%;
+    padding-right: 70px;
+  }
+  .whyCertificat .text .titleBox:nth-child(2n) {
+    padding-left: 70px;
+    padding-right: 0px;
+  }
+}
 @media screen and (max-width: 1279px) {
   .whyCertificat {
     display: flex;
@@ -4478,6 +4575,7 @@ svg {
   .whyCertificat .image {
     padding: 30px;
     border-radius: 20px;
+    order: 4;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -4609,6 +4707,64 @@ svg {
   .run-line .run-line__item img.circleImg--5 {
     width: 30%;
     margin-right: 0%;
+  }
+}
+
+.whyCertificat-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 50px;
+  background: var(--bg);
+  padding: 60px 40px;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  order: 5;
+}
+.whyCertificat-table .titleBox {
+  width: 33.333333%;
+  padding: 0px 20px;
+}
+.whyCertificat-table .titleBox .title {
+  min-height: 74px;
+}
+.whyCertificat-table .button {
+  margin-top: 40px;
+}
+@media screen and (max-width: 1279px) {
+  .whyCertificat-table {
+    border-radius: 20px;
+    padding: 32px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .whyCertificat-table .titleBox {
+    width: 31%;
+    padding: 0px;
+  }
+  .whyCertificat-table .titleBox .title {
+    min-height: 45px;
+  }
+  .whyCertificat-table .button {
+    margin-top: 24px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .whyCertificat-table {
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  .whyCertificat-table .titleBox {
+    width: 100%;
+    gap: 10px;
+  }
+  .whyCertificat-table .titleBox .title {
+    min-height: 1px;
+  }
+  .whyCertificat-table .button {
+    margin-top: 10px;
   }
 }
 

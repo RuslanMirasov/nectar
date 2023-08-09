@@ -1,4 +1,5 @@
 const scrollLinks = document.querySelectorAll('[data-scrollto]');
+const poddomen = document.querySelector('.poddomen').value;
 const header = document.querySelector('.header');
 const body = document.querySelector('.body');
 const menu = document.querySelector('.menu-backdrop');
@@ -17,7 +18,8 @@ scrollLinks.forEach(link => {
         body.classList.toggle('lock');
       }
     } else {
-      const homePage = `${window.location.protocol}//${window.location.host}/#${this.dataset.scrollto}`;
+      console.log(poddomen);
+      const homePage = `${window.location.protocol}//${window.location.host}${poddomen}/#${this.dataset.scrollto}`;
       document.location = homePage;
     }
   });

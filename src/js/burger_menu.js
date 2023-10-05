@@ -11,7 +11,7 @@ const menuBackdrop = document.querySelector('.menu-backdrop');
 const navigation = document.querySelector('.menu__list');
 const navigationItems = navigation.querySelectorAll('li');
 const assetsPath = document.querySelector('.js-assets').value;
-const menuArrowMarkup = `<div class="menuArrow"><svg class="menuList__arrow"><use href="${assetsPath}img/icons.svg#arr_down"></use></svg></div>`;
+const menuArrowMarkup = `<div class="menuArrow"><svg viewBox="0 0 16 16" class="menuList__arrow"><path d="M8.00004 11L8.70715 11.7071C8.31662 12.0976 7.68346 12.0976 7.29293 11.7071L8.00004 11ZM13.7072 6.70711L8.70715 11.7071L7.29293 10.2929L12.2929 5.2929L13.7072 6.70711ZM7.29293 11.7071L2.29294 6.70711L3.70714 5.2929L8.70715 10.2929L7.29293 11.7071Z"/></svg></div>`;
 
 navigationItems.forEach(navItem => {
   if (navItem.querySelector('ul')) {

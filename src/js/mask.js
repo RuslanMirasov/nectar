@@ -13,7 +13,6 @@ phones.forEach(phone => {
         .catch(() => callback('us'));
     },
     customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
-      console.log(selectedCountryData);
       if (selectedCountryData.dialCode === '7') {
         return '+7 (000) 000 00-00';
       } else if (selectedCountryData.dialCode === '372') {
@@ -24,21 +23,3 @@ phones.forEach(phone => {
     },
   });
 });
-
-// import Inputmask from 'inputmask';
-
-// const phones = document.querySelectorAll('.input--tel');
-// const ruMask = new Inputmask('+7 (999) 999-99-99');
-// const etMask = new Inputmask('+372 9999 9999');
-// let currentMask = ruMask;
-// const pageUrlText = window.location.href;
-// const checkEn = pageUrlText.includes('en/');
-// const checkEt = pageUrlText.includes('et/');
-
-// if (checkEn == true || checkEt == true) {
-//   currentMask = etMask;
-// }
-
-// phones.forEach(phone => {
-//   currentMask.mask(phone);
-// });

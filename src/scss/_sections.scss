@@ -292,7 +292,7 @@
     .title--h5 {
       display: block;
       margin-top: 30px;
-      max-width: 586px;
+      max-width: 770px;
     }
   }
   @media screen and (max-width: 1279px) {
@@ -318,6 +318,10 @@
     }
     .wellness-line {
       bottom: 14%;
+      .wellness-line1 {
+        right: 4%;
+        top: -24%;
+      }
     }
     @media screen and (max-width: 1023px) {
       .wellness--three {
@@ -945,6 +949,16 @@
     .forBtn {
       margin-top: 36px;
     }
+    .combination {
+      display: inline-flex;
+      flex-direction: column;
+      width: calc(50% - 28px);
+      gap: 20px;
+      .title,
+      .subtitle {
+        width: 100%;
+      }
+    }
   }
   @media screen and (max-width: 1279px) {
     margin-top: 40px;
@@ -959,6 +973,10 @@
       }
       .forBtn {
         margin-top: 10px;
+      }
+      .combination {
+        width: 100%;
+        gap: 20px;
       }
     }
   }
@@ -1024,7 +1042,7 @@
       position: absolute;
       min-width: 460px;
       max-width: 95%;
-      bottom: 45px;
+      bottom: 32px;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -1696,15 +1714,16 @@
   background: var(--bg);
   height: 168px;
   img {
-    height: 100%;
-    max-height: 72px;
+    height: auto;
+    max-height: 90%;
+    max-width: 204px;
   }
   @media screen and (max-width: 1279px) {
     border-radius: 20px;
     margin-bottom: 14px;
     height: 120px;
     img {
-      max-height: 50px;
+      max-height: 100%;
     }
   }
 }

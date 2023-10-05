@@ -6,6 +6,7 @@ const modalBackdrop = document.querySelector('.backdrop');
 const fixedElements = [].filter.call(document.all, e => getComputedStyle(e).position == 'fixed');
 const body = document.querySelector('.body');
 const popupBody = document.querySelectorAll('.popup__body');
+const root = document.querySelector('.js-assets').value;
 let bodyPadding = window.innerWidth - document.querySelector('.main').offsetWidth;
 
 //SENDMAIL CONSTS
@@ -124,20 +125,25 @@ forms.forEach(form => {
     if (answer != false) {
       popup('loading');
       const formData = new FormData(this);
-      let dataArray = {};
-      formData.forEach((value, key) => (dataArray[key] = value));
-      let jsonData = JSON.stringify(dataArray);
-
-      setTimeout(function () {
-        popup('ok');
-        formsReset();
-        console.log(jsonData);
-        //-----
-        //-----
-        //----- google Analitics targets
-        //-----
-        // ----
-      }, 1500);
+      jQuery.ajax({
+        type: 'POST',
+        processData: false,
+        contentType: false,
+        url: root + '/sendmail/send.php',
+        data: formData,
+        success: function () {
+          setTimeout(function () {
+            popup('ok');
+            formsReset();
+            // if (google_target != "") {
+            //   ga("send", "event", "" + google_target, "" + google_target);
+            // }
+            // if (yandex_target != "") {
+            //   yaCounterXXXXXXXXXXXXX.reachGoal("" + yandex_target);
+            // }
+          }, 2000);
+        },
+      });
     }
     return false;
   });
